@@ -1,0 +1,32 @@
+body main {
+  margin: 5% auto;
+  max-width: 900px;
+  text-align: left;
+}
+
+body main .grid {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body main .grid .card {
+  width: 200px;
+  height: 150px;
+  border: solid 1px gray;
+  margin-left: 5%;
+  padding: 1.5%;
+}
+
+body main .grid .card:first-child {
+  margin: 0;
+}
+/*# sourceMappingURL=components.css.map */

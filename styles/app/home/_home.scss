@@ -1,0 +1,62 @@
+.search {
+    margin: 10% 5%;
+    margin-bottom: 15%;
+    > .title span {
+        color: var(--color-secondary);
+    }
+    .search-component {
+        position: relative;
+        margin: 10% 0;
+        img {
+            width: 85%;
+            margin: 0 auto;
+        }
+        .fa-search {
+            position: absolute;
+            bottom: 19px;
+            z-index: 1;
+            right: 20px;
+            font-size: 26px;
+            color: var(--color-primary);
+        }
+        input {
+            background-color: var(--bgk-primary);
+            width: 100%;
+            border-radius:25px;
+            border: 1px solid var(--color-primary); 
+            height: 50px;
+            padding: 0 60px 0 50px;
+            position: relative;
+            top: -5px;
+            font-size: 16px;
+        }
+    }
+    p {
+        font-family: 'Montserrat', sans-serif;
+    }
+    .categories {
+        margin: 10% 0;
+        color: var(--color-primary);
+        .title {
+            font-size: 18px;
+        }
+    }
+}
+
+.trend {
+    padding: 0 0 5%;
+    background-color: var(--bgk-secondary);
+    padding-top: 12%;
+    .text, .title {
+        margin-bottom: 10px;
+    }
+    .gallery {
+        padding: 10px 0 50px 0;
+        display: flex;
+        justify-content: flex-start;
+        overflow: hidden;
+        .card {
+            margin-left: 20px;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+body {
+    main {
+        margin: 5% auto;
+        max-width: 900px;
+        text-align: left;
+        .grid {
+            margin-top: 30px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            .card {
+                width: 200px;
+                height: 150px;
+                border:solid 1px gray;
+                margin-left: 5%;
+                padding: 1.5%;
+                &:first-child{
+                    margin: 0;
+                } 
+            }
+        }
+    }
+}
