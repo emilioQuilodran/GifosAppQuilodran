@@ -20,9 +20,10 @@ menu_times.addEventListener('click', function(){
 })
 
 function handleScroll(){
+    var body = document.getElementById('body');
+    console.log(body);
     if(isModalActive){
-       var body = document.getElementsByTagName('body');
-       body.classList.add("modal-open");
+        body.classList.add("modal-open");
     } else {
         body.classList.remove("modal-open"); 
     }

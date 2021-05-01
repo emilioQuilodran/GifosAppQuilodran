@@ -28,6 +28,9 @@ body {
     main {
         text-align: center;
     }
+    &.modal-open {
+        overflow: hidden;
+    }
 }
 
 h1 { font-size: 2.6rem; }
