@@ -6,6 +6,8 @@
   --color-secondary: #5ED7C6;
   --bgk-primary: #FFFFFF;
   --bgk-secondary: #F3F5F8;
+  --bkg-modal: #572EE5;
+  --color-text-modal: #FFFFFF;
 }
 
 html {
@@ -258,6 +260,17 @@ footer ul li {
   border: solid 1px gray;
 }
 
+:root {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  --color-primary:#572EE5;
+  --color-secondary: #5ED7C6;
+  --bgk-primary: #FFFFFF;
+  --bgk-secondary: #F3F5F8;
+  --bkg-modal: #572EE5;
+  --color-text-modal: #FFFFFF;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -266,11 +279,11 @@ footer ul li {
   right: 0;
   bottom: 0;
   z-index: 10;
-  background-color: black;
+  background-color: var(--bkg-modal);
 }
 
 .modal header {
-  background-color: #37383C;
+  background-color: var(--bgk-primary);
 }
 
 .modal .modal-content .body {
@@ -286,7 +299,7 @@ footer ul li {
   content: '';
   width: 40px;
   height: 2px;
-  background-color: #FFFFFF;
+  background-color: var(--bgk-primary);
   bottom: 0;
   left: 45%;
 }
@@ -294,6 +307,6 @@ footer ul li {
 .modal .modal-content .body a {
   display: block;
   padding: 8% 0;
-  color: white;
+  color: var(--color-text-modal);
 }
 /*# sourceMappingURL=styles.css.map */

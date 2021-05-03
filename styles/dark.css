@@ -5,6 +5,8 @@
     --color-secondary: #5ED7C6;
     --bgk-primary: #37383C;
     --bgk-secondary: #222326;
+    --bkg-modal: black;
+    --color-text-modal: #FFFFFF;
 }
 p, i {
     color: var(--color-primary);
