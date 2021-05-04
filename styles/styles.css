@@ -6,7 +6,7 @@
   --color-secondary: #5ED7C6;
   --bgk-primary: #FFFFFF;
   --bgk-secondary: #F3F5F8;
-  --bkg-modal: #572EE5;
+  --bkg-modal: #FFFFFF;
   --color-text-modal: #FFFFFF;
 }
 
@@ -267,7 +267,7 @@ footer ul li {
   --color-secondary: #5ED7C6;
   --bgk-primary: #FFFFFF;
   --bgk-secondary: #F3F5F8;
-  --bkg-modal: #572EE5;
+  --bkg-modal: #FFFFFF;
   --color-text-modal: #FFFFFF;
 }
 
@@ -308,5 +308,81 @@ footer ul li {
   display: block;
   padding: 8% 0;
   color: var(--color-text-modal);
+}
+
+#modal-galery .body {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20% auto 0;
+}
+
+#modal-galery .body img {
+  margin: 20% 0 5%;
+}
+
+#modal-galery .body .fa-times {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  cursor: pointer;
+  color: var(--color-primary);
+}
+
+#modal-galery .body .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#modal-galery .body .actions .description {
+  text-align: left;
+}
+
+#modal-galery .body .actions .description .title {
+  color: black;
+  font-weight: 600;
+}
+
+#modal-galery .body .actions > div:last-of-type span {
+  display: inline-block;
+  margin-left: 10px;
+  width: 36px;
+  height: 36px;
+  border: solid 1px lightgrey;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#modal-galery .body .actions > div:last-of-type span.like {
+  background-image: url("../images/icons-card/icon-fav.svg");
+}
+
+#modal-galery .body .actions > div:last-of-type span.like:hover {
+  background-image: url("../images/icons-card/icon-fav-hover.svg");
+}
+
+#modal-galery .body .actions > div:last-of-type span.like.active {
+  background-image: url("../images/icons-card/icon-fav-active.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#modal-galery .body .actions > div:last-of-type span.download {
+  background-image: url("../images/icons-card/icon-download.svg");
+}
+
+#modal-galery .body .actions > div:last-of-type span.download:hover {
+  background-image: url("../images/icons-card/icon-download-hover.svg");
 }
 /*# sourceMappingURL=styles.css.map */

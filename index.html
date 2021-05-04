@@ -7,7 +7,7 @@
     <title>KrolGifs</title>
     <script src="https://use.fontawesome.com/be318f33e9.js"></script>
     <link rel="stylesheet" href="./styles/styles.css">
-    <link id="theme-style" rel="stylesheet" href="">
+    <link id="theme-style" rel="stylesheet" href=""> <!--./styles/dark.css-->
 </head>
 <body id="body">
     <header>
@@ -89,18 +89,19 @@
             </div>
         </div>
     </section>
-    <section id="modal-galery" class="modal">
+    <section id="modal-galery" class="modal" style="display: block;">
         <div class="modal-content">
             <div class="body">
-                <i id="menu-times" class="fa fa-times fa-lg"></i>
+                <i class="fa fa-times fa-lg"></i>
                 <img src="https://placehold.co/245x185/png" alt="">
-                <div>
+            <div class="actions">
+                <div class="description">
                     <p>User</p>
-                    <p>Titulo Gifo</p>
+                    <p class="title">Titulo Gifo</p>
                 </div>
-                <div class="actions">
-                    <i class="fa fa-heart"></i>
-                    <i class="fa fa-download"></i>
+                <div>
+                    <span class="like active"></span>
+                    <span class="download"></span>
                 </div>
             </div>
         </div>
