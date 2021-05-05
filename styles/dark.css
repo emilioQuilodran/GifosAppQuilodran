@@ -5,9 +5,10 @@
     --color-secondary: #5ED7C6;
     --bgk-primary: #37383C;
     --bgk-secondary: #222326;
-    --bkg-modal: black;
-    --bkg-modal-secondary: black;
+    --bkg-modal: rgba(0,0,0,0.95);
+    --bkg-modal-secondary: rgba(0,0,0,0.95);
     --color-text-modal: #FFFFFF;
+    --color-third: #fff;
 }
 p, i {
     color: var(--color-primary);
