@@ -1,0 +1,32 @@
+.icon {
+    display: inline-block;
+    margin-left: 10px;
+    width: 34px;
+    height: 34px;
+    border: solid 1px lightgrey;
+    border-radius: 10px;
+    cursor: pointer;
+    &.like {
+        background-image: url("../images/icons-card/icon-fav.svg");
+        &:hover {
+            background-image: url("../images/icons-card/icon-fav-hover.svg");
+        }
+        &.active {
+            background-image: url("../images/icons-card/icon-fav-active.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &.download {
+        background-image: url("../images/icons-card/icon-download.svg");
+        &:hover {
+            background-image: url("../images/icons-card/icon-download-hover.svg");
+        }
+    }
+    &.max {
+        background-image: url("../images/icons-card/icon-max-normal.svg");
+        &:hover {
+            background-image: url("../images/icons-card/icon-max-hover.svg");
+        }
+    }
+}

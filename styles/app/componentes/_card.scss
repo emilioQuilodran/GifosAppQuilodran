@@ -1,13 +1,31 @@
+@import '../utils/variables';
+
 .card {
     position: relative;
+    &:hover{
+        .overlay {
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
     .overlay {
+        opacity: 0;
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: column wrap;
         justify-content: space-between;
         position: absolute;
+        background: var(--bkg-card-hover);
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
+        padding: 15px;
+        > div {
+            text-align: left;
+            color: var(--color-text-modal);
+            &:first-of-type {
+                align-self: flex-end;
+            }
+        }
     }
 }
