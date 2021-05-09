@@ -464,4 +464,24 @@ footer ul li {
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
+
+.card.-sm {
+  width: 155px;
+  height: 120px;
+  margin: 3%;
+  overflow: hidden;
+}
+
+.card.-sm .overlay {
+  padding: 7px;
+  bottom: 0;
+}
+
+.card.-sm .overlay .icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 3px;
+  border-radius: 6px;
+  background-position: center;
+}
 /*# sourceMappingURL=styles.css.map */

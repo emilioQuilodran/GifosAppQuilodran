@@ -28,4 +28,21 @@
             }
         }
     }
+    &.-sm {
+        width: 155px;
+        height: 120px;
+        margin: 3%;
+        overflow: hidden;
+        .overlay {
+            padding: 7px;
+            bottom: 0;
+            .icon{
+                width: 30px;
+                height: 30px;
+                margin-left: 3px;
+                border-radius: 6px;
+                background-position: center;
+            }
+        }
+    }
 }
