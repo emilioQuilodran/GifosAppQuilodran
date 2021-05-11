@@ -1,19 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;900&display=swap');
+@import '../app/utils/variables';
+@import '../app/componentes/modal';
+@import '../app/componentes/card';
+
 body {
     main {
         margin: 5% auto;
-        max-width: 900px;
-        text-align: left;
-        .grid {
+        max-width: 980px;
+            .grid {
             margin-top: 30px;
             display: flex;
             flex-flow: row wrap;
             justify-content: flex-start;
-            .card {
-                width: 200px;
-                height: 150px;
-                border:solid 1px gray;
+            .box {
+                min-width: 200px;
                 margin-left: 5%;
                 padding: 1.5%;
+                h6 {
+                    margin-bottom: 20px;
+                }
+                > div {
+                    display: flex;
+                    flex-flow: column wrap;
+                    img, i, .icon {
+                        display: inline-block;
+                        margin: 5px 0;
+                    }
+                    &.center {
+                        align-content: center;
+                    }
+                }
                 &:first-child{
                     margin: 0;
                 } 

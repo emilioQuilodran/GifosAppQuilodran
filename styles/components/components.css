@@ -1,7 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;900&display=swap");
+:root {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  --color-primary:#572EE5;
+  --color-third: black;
+  --color-secondary: #5ED7C6;
+  --bgk-primary: #FFFFFF;
+  --bgk-secondary: #F3F5F8;
+  --bkg-modal: rgba(87,46,229,0.9);
+  --bkg-card-hover: rgba(87,46,229,0.8);
+  --bkg-modal-secondary: #FFFFFF;
+  --color-text-modal: #FFFFFF;
+}
+
+:root {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  --color-primary:#572EE5;
+  --color-third: black;
+  --color-secondary: #5ED7C6;
+  --bgk-primary: #FFFFFF;
+  --bgk-secondary: #F3F5F8;
+  --bkg-modal: rgba(87,46,229,0.9);
+  --bkg-card-hover: rgba(87,46,229,0.8);
+  --bkg-modal-secondary: #FFFFFF;
+  --color-text-modal: #FFFFFF;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: var(--bkg-modal);
+}
+
+.modal header {
+  background-color: var(--bgk-primary);
+}
+
+.modal .modal-content .body {
+  text-align: center;
+}
+
+.modal .modal-content .body ul li {
+  position: relative;
+}
+
+.modal .modal-content .body ul li::before {
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 2px;
+  background-color: var(--bgk-primary);
+  bottom: 0;
+  left: 45%;
+}
+
+.modal .modal-content .body a {
+  display: block;
+  padding: 8% 0;
+  color: var(--color-text-modal);
+}
+
+#modal-galery {
+  background-color: var(--bkg-modal-secondary);
+}
+
+#modal-galery .body {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20% auto 0;
+}
+
+#modal-galery .body img {
+  margin: 20% 0 5%;
+}
+
+#modal-galery .body .fa-times {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  cursor: pointer;
+  color: var(--color-primary);
+}
+
+#modal-galery .body .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#modal-galery .body .actions .description {
+  text-align: left;
+}
+
+#modal-galery .body .actions .description .title {
+  color: var(--color-third);
+  font-weight: 600;
+}
+
+:root {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  --color-primary:#572EE5;
+  --color-third: black;
+  --color-secondary: #5ED7C6;
+  --bgk-primary: #FFFFFF;
+  --bgk-secondary: #F3F5F8;
+  --bkg-modal: rgba(87,46,229,0.9);
+  --bkg-card-hover: rgba(87,46,229,0.8);
+  --bkg-modal-secondary: #FFFFFF;
+  --color-text-modal: #FFFFFF;
+}
+
+.card {
+  position: relative;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.card .overlay {
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  background: var(--bkg-card-hover);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  padding: 15px;
+}
+
+.card .overlay > div {
+  text-align: left;
+  color: var(--color-text-modal);
+}
+
+.card .overlay > div:first-of-type {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.card.-sm {
+  width: 155px;
+  height: 120px;
+  margin: 3%;
+  overflow: hidden;
+}
+
+.card.-sm .overlay {
+  padding: 7px;
+  bottom: 0;
+}
+
+.card.-sm .overlay .icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 3px;
+  border-radius: 6px;
+  background-position: center;
+}
+
 body main {
   margin: 5% auto;
-  max-width: 900px;
-  text-align: left;
+  max-width: 980px;
 }
 
 body main .grid {
@@ -18,15 +207,37 @@ body main .grid {
           justify-content: flex-start;
 }
 
-body main .grid .card {
-  width: 200px;
-  height: 150px;
-  border: solid 1px gray;
+body main .grid .box {
+  min-width: 200px;
   margin-left: 5%;
   padding: 1.5%;
 }
 
-body main .grid .card:first-child {
+body main .grid .box h6 {
+  margin-bottom: 20px;
+}
+
+body main .grid .box > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+body main .grid .box > div img, body main .grid .box > div i, body main .grid .box > div .icon {
+  display: inline-block;
+  margin: 5px 0;
+}
+
+body main .grid .box > div.center {
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+body main .grid .box:first-child {
   margin: 0;
 }
 /*# sourceMappingURL=components.css.map */
