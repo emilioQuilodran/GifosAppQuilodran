@@ -77,6 +77,10 @@ p {
     height: 50px;
     line-height: 50px;
     font-size: 16px;
+    &:hover {
+        background-color: var(--color-primary);
+        color: var(--color-text-modal);
+    }
 }
 @import 'app/header-footer/header-footer';
 @import 'app/home/home';
