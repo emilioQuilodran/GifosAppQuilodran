@@ -73,6 +73,27 @@ html {
   color: var(--color-primary);
 }
 
+.link {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--color-primary);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.link.active {
+  color: #9CAFC3;
+}
+
+.link.active:hover {
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: var(--color-secondary);
+          text-decoration-color: var(--color-secondary);
+}
+
 body {
   background-color: var(--bgk-primary);
 }
@@ -163,9 +184,36 @@ p {
   height: 50px;
   line-height: 50px;
   font-size: 16px;
+  cursor: pointer;
+}
+
+.btn.add {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 .btn:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-modal);
+}
+
+.arrow {
+  background-color: var(--bgk-primary);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.arrow i.fa {
+  line-height: 40px;
+  margin: 0 !important;
+}
+
+.arrow:hover {
   background-color: var(--color-primary);
   color: var(--color-text-modal);
 }
@@ -242,6 +290,7 @@ footer ul li {
   position: relative;
   top: -5px;
   font-size: 16px;
+  color: var(--color-third);
 }
 
 .search p {

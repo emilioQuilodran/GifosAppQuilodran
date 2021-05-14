@@ -16,6 +16,22 @@ html {scroll-behavior: smooth;}
     font-family: 'Montserrat', sans-serif;
     color: var(--color-primary);
 }
+.link {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-primary);
+    font-weight: 600;
+    cursor: pointer;
+    &.active {
+        color: #9CAFC3;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    &:hover {
+        text-decoration: underline;
+        text-decoration-color: var(--color-secondary)
+    }
+}
 body {
     background-color: var(--bgk-primary);
     main {
@@ -67,21 +83,7 @@ p {
         font-weight: 600;
     }
 }
-.btn {
-    display: inline-block;
-    background-color: var(--bgk-primary);
-    color: var(--color-primary);
-    width: 130px;
-    border-radius:25px;
-    border: 1px solid var(--color-primary); 
-    height: 50px;
-    line-height: 50px;
-    font-size: 16px;
-    &:hover {
-        background-color: var(--color-primary);
-        color: var(--color-text-modal);
-    }
-}
+@import 'app/utils/buttons';
 @import 'app/header-footer/header-footer';
 @import 'app/home/home';
 @import 'app/favs/favs';

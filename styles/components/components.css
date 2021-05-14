@@ -217,6 +217,10 @@ body main .grid .box h6 {
   margin-bottom: 20px;
 }
 
+body main .grid .box .arrow {
+  margin: 10px 0;
+}
+
 body main .grid .box > div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -227,7 +231,7 @@ body main .grid .box > div {
           flex-flow: column wrap;
 }
 
-body main .grid .box > div img, body main .grid .box > div i, body main .grid .box > div .icon {
+body main .grid .box > div > img, body main .grid .box > div i, body main .grid .box > div .icon {
   display: inline-block;
   margin: 5px 0;
 }

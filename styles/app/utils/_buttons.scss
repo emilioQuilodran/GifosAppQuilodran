@@ -1,0 +1,39 @@
+.btn {
+    display: inline-block;
+    background-color: var(--bgk-primary);
+    color: var(--color-primary);
+    width: 130px;
+    border-radius:25px;
+    border: 1px solid var(--color-primary); 
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    &.add {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    &:hover {
+        background-color: var(--color-primary);
+        color: var(--color-text-modal);
+    }
+}
+
+.arrow {
+    background-color: var(--bgk-primary);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary); 
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    cursor: pointer;
+    i.fa {
+        line-height: 40px;
+        margin: 0 !important;
+    }
+    &:hover {
+        background-color: var(--color-primary);
+        color: var(--color-text-modal);
+    }
+}

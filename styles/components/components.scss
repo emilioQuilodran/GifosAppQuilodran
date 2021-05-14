@@ -19,10 +19,13 @@ body {
                 h6 {
                     margin-bottom: 20px;
                 }
+                .arrow {
+                    margin: 10px 0;
+                }
                 > div {
                     display: flex;
                     flex-flow: column wrap;
-                    img, i, .icon {
+                    > img, i, .icon {
                         display: inline-block;
                         margin: 5px 0;
                     }
