@@ -25,3 +25,6 @@ header {
 footer {
     border-bottom: solid 5px var(--bgk-secondary);
 }
+.btn:hover {
+    color: var(--bgk-primary);
+}

@@ -1,0 +1,18 @@
+@import '../utils/variables';
+
+.create-gifo {
+    .title  {
+        margin-bottom: 10%;
+        span {
+            color: var(--color-secondary);
+        }
+    }
+    .screen {
+        min-width: 280px;
+        width: 90%;
+        margin: 10% auto;
+        padding: 10%;
+        border: solid 1px var(--color-primary);
+    }
+
+}

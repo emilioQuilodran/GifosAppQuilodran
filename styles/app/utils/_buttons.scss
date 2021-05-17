@@ -14,6 +14,20 @@
         height: 50px;
         border-radius: 50%;
     }
+    &.circle {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        border-radius: 50%;
+        &:hover {
+            background-color:initial;
+            color: var(--color-primary);
+        }
+        &:active {
+            background-color: var(--color-primary);
+            color: var(--color-text-modal);
+        }
+    }
     &:hover {
         background-color: var(--color-primary);
         color: var(--color-text-modal);

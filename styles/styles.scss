@@ -83,9 +83,31 @@ p {
         font-weight: 600;
     }
 }
+.line {
+    width: 90%;
+    height: 7px;
+    margin: 10% auto;
+    background-color: var(--color-primary);
+    border-radius: 8px;    
+}
+.pagination {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    li {
+        margin-left: 15px;
+        a {
+            cursor: default;
+        }
+        &:first-of-type {
+            margin: 0;
+        }
+    }
+}
 @import 'app/utils/buttons';
 @import 'app/header-footer/header-footer';
 @import 'app/home/home';
 @import 'app/favs/favs';
 @import 'app/componentes/modal';
 @import 'app/componentes/card';
+@import 'app/componentes/gifs-load-screen';
