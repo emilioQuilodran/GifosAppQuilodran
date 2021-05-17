@@ -164,6 +164,10 @@ p {
   right: -5px;
 }
 
+.logo a:active {
+  color: var(--color-primary);
+}
+
 .logo p {
   margin-left: 7px;
   background: var(--bgk-primary);
@@ -172,6 +176,7 @@ p {
   top: 16px;
   line-height: 20px;
   font-weight: 600;
+  color: var(--color-primary);
 }
 
 .line {
