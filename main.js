@@ -49,5 +49,6 @@ function modeSwitch(){
 function handleTheme(theme){
     if(!theme){
         body.classList.add('dark-mode');
+        theme_btn.innerHTML = "Modo Diurno";
     }
 }
