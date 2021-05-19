@@ -3,13 +3,14 @@ console.log("hello word :)");
 var modal_menu = document.getElementById('modal-menu');
 var menu_bars = document.getElementById("menu-bars");
 var menu_times = document.getElementById("menu-times");
-var linkStyle = document.getElementById('theme-style');
 var theme_btn = document.getElementById('theme-btn');
-const DARK_PATH = "./styles/dark.css";
+var body = document.getElementById('body');
 let isModalActive = false;
-let isLight = true;
+let isLight;
 
-let theme = localStorage.getItem('modo-nocturno');
+let theme = localStorage.getItem('modo-normal');
+theme = (theme === "true")
+handleTheme(theme);
 
 menu_bars.addEventListener('click', function(){
     modal_menu.style.display = "block";
@@ -35,13 +36,18 @@ function handleScroll(){
 function modeSwitch(){
     isLight = !isLight;
     if(isLight){
-        linkStyle.href = "";
+        if(body.classList.contains('dark-mode')){
+            body.classList.remove('dark-mode');
+        }
         theme_btn.innerHTML = "Modo Nocturno";
-        console.log(" theme dark: ",isLight);
     } else {
-        console.log(" theme dark: ",isLight);
-        linkStyle.href = DARK_PATH;
+        body.classList.add('dark-mode');
         theme_btn.innerHTML = "Modo Diurno";
     }
-    localStorage.setItem('modo-nocturno', isLight);
+    localStorage.setItem('modo-normal', isLight);
+}
+function handleTheme(theme){
+    if(!theme){
+        body.classList.add('dark-mode');
+    }
 }

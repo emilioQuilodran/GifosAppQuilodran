@@ -1,4 +1,4 @@
-:root {
+body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     --color-primary:#572EE5;
@@ -10,4 +10,35 @@
     --bkg-card-hover: rgba(87,46,229,0.8);
     --bkg-modal-secondary: #FFFFFF; 
     --color-text-modal: #FFFFFF;
+    
+    &.dark-mode {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        --color-primary: white;
+        --color-secondary: #5ED7C6;
+        --bgk-primary: #37383C;
+        --bgk-secondary: #222326;
+        --bkg-modal: rgba(0,0,0,0.95);
+        --bkg-modal-secondary: rgba(0,0,0,0.95);
+        --color-text-modal: #FFFFFF;
+        --color-third: #fff;
+        p, i {
+            color: var(--color-primary);
+        }
+        .logo {
+            border: solid 4px var(--color-secondary);
+        }
+        .logo p {
+            background: var(--bgk-primary);
+        }
+        header {
+            border-top: solid 5px var(--bgk-secondary);
+        }
+        footer {
+            border-bottom: solid 5px var(--bgk-secondary);
+        }
+        .btn:hover {
+            color: var(--bgk-primary);
+        }
+    }
 }

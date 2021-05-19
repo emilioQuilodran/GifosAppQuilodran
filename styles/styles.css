@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;900&display=swap");
-:root {
+body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   --color-primary:#572EE5;
@@ -11,6 +11,43 @@
   --bkg-card-hover: rgba(87,46,229,0.8);
   --bkg-modal-secondary: #FFFFFF;
   --color-text-modal: #FFFFFF;
+}
+
+body.dark-mode {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  --color-primary: white;
+  --color-secondary: #5ED7C6;
+  --bgk-primary: #37383C;
+  --bgk-secondary: #222326;
+  --bkg-modal: rgba(0,0,0,0.95);
+  --bkg-modal-secondary: rgba(0,0,0,0.95);
+  --color-text-modal: #FFFFFF;
+  --color-third: #fff;
+}
+
+body.dark-mode p, body.dark-mode i {
+  color: var(--color-primary);
+}
+
+body.dark-mode .logo {
+  border: solid 4px var(--color-secondary);
+}
+
+body.dark-mode .logo p {
+  background: var(--bgk-primary);
+}
+
+body.dark-mode header {
+  border-top: solid 5px var(--bgk-secondary);
+}
+
+body.dark-mode footer {
+  border-bottom: solid 5px var(--bgk-secondary);
+}
+
+body.dark-mode .btn:hover {
+  color: var(--bgk-primary);
 }
 
 .icon {
@@ -416,7 +453,7 @@ footer ul li {
   margin-top: 10%;
 }
 
-:root {
+body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   --color-primary:#572EE5;
@@ -428,6 +465,43 @@ footer ul li {
   --bkg-card-hover: rgba(87,46,229,0.8);
   --bkg-modal-secondary: #FFFFFF;
   --color-text-modal: #FFFFFF;
+}
+
+body.dark-mode {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  --color-primary: white;
+  --color-secondary: #5ED7C6;
+  --bgk-primary: #37383C;
+  --bgk-secondary: #222326;
+  --bkg-modal: rgba(0,0,0,0.95);
+  --bkg-modal-secondary: rgba(0,0,0,0.95);
+  --color-text-modal: #FFFFFF;
+  --color-third: #fff;
+}
+
+body.dark-mode p, body.dark-mode i {
+  color: var(--color-primary);
+}
+
+body.dark-mode .logo {
+  border: solid 4px var(--color-secondary);
+}
+
+body.dark-mode .logo p {
+  background: var(--bgk-primary);
+}
+
+body.dark-mode header {
+  border-top: solid 5px var(--bgk-secondary);
+}
+
+body.dark-mode footer {
+  border-bottom: solid 5px var(--bgk-secondary);
+}
+
+body.dark-mode .btn:hover {
+  color: var(--bgk-primary);
 }
 
 .modal {
@@ -517,7 +591,7 @@ footer ul li {
   font-weight: 600;
 }
 
-:root {
+body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   --color-primary:#572EE5;
@@ -529,6 +603,43 @@ footer ul li {
   --bkg-card-hover: rgba(87,46,229,0.8);
   --bkg-modal-secondary: #FFFFFF;
   --color-text-modal: #FFFFFF;
+}
+
+body.dark-mode {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  --color-primary: white;
+  --color-secondary: #5ED7C6;
+  --bgk-primary: #37383C;
+  --bgk-secondary: #222326;
+  --bkg-modal: rgba(0,0,0,0.95);
+  --bkg-modal-secondary: rgba(0,0,0,0.95);
+  --color-text-modal: #FFFFFF;
+  --color-third: #fff;
+}
+
+body.dark-mode p, body.dark-mode i {
+  color: var(--color-primary);
+}
+
+body.dark-mode .logo {
+  border: solid 4px var(--color-secondary);
+}
+
+body.dark-mode .logo p {
+  background: var(--bgk-primary);
+}
+
+body.dark-mode header {
+  border-top: solid 5px var(--bgk-secondary);
+}
+
+body.dark-mode footer {
+  border-bottom: solid 5px var(--bgk-secondary);
+}
+
+body.dark-mode .btn:hover {
+  color: var(--bgk-primary);
 }
 
 .card {
@@ -591,7 +702,7 @@ footer ul li {
   background-position: center;
 }
 
-:root {
+body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   --color-primary:#572EE5;
@@ -603,6 +714,43 @@ footer ul li {
   --bkg-card-hover: rgba(87,46,229,0.8);
   --bkg-modal-secondary: #FFFFFF;
   --color-text-modal: #FFFFFF;
+}
+
+body.dark-mode {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  --color-primary: white;
+  --color-secondary: #5ED7C6;
+  --bgk-primary: #37383C;
+  --bgk-secondary: #222326;
+  --bkg-modal: rgba(0,0,0,0.95);
+  --bkg-modal-secondary: rgba(0,0,0,0.95);
+  --color-text-modal: #FFFFFF;
+  --color-third: #fff;
+}
+
+body.dark-mode p, body.dark-mode i {
+  color: var(--color-primary);
+}
+
+body.dark-mode .logo {
+  border: solid 4px var(--color-secondary);
+}
+
+body.dark-mode .logo p {
+  background: var(--bgk-primary);
+}
+
+body.dark-mode header {
+  border-top: solid 5px var(--bgk-secondary);
+}
+
+body.dark-mode footer {
+  border-bottom: solid 5px var(--bgk-secondary);
+}
+
+body.dark-mode .btn:hover {
+  color: var(--bgk-primary);
 }
 
 .create-gifo .title {
