@@ -1,10 +1,14 @@
 'use strict';
-console.log("hello word :)");
+
+// handle header modal & theme features
 var modal_menu = document.getElementById('modal-menu');
+var modal_gallery = document.getElementById('modal-galery');
 var menu_bars = document.getElementById("menu-bars");
-var menu_times = document.getElementById("menu-times");
+var menu_times = document.getElementsByClassName("fa-times");
 var theme_btn = document.getElementById('theme-btn');
 var body = document.getElementById('body');
+var btn_show_modal = document.getElementsByClassName('max');
+
 let isModalActive = false;
 let isLight;
 
@@ -17,11 +21,25 @@ menu_bars.addEventListener('click', function(){
     isModalActive = true;
     handleScroll();
 })
-menu_times.addEventListener('click', function(){
-    modal_menu.style.display = "none";
-    isModalActive = false;
+
+// close modals
+for (const item of menu_times) {
+    item.addEventListener('click', function(){
+        modal_menu.style.display = "none";
+        modal_gallery.style.display = "none";
+        isModalActive = false;
+        handleScroll();
+    })   
+}
+for (const item of btn_show_modal) {
+    item.addEventListener("click", show_modal_gallery);
+}
+function show_modal_gallery(item){
+    console.log(item);
+    isModalActive = true;
+    document.getElementById('modal-galery').style.display = 'block';
     handleScroll();
-})
+}
 
 theme_btn.addEventListener('click', modeSwitch);
 

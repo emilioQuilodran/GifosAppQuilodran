@@ -72,6 +72,7 @@ body.dark-mode .btn:hover {
   background-image: url("../images/icons-card/icon-fav-active.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-color: white;
 }
 
 .icon.download {
