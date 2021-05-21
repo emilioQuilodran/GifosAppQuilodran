@@ -35,7 +35,6 @@ for (const item of btn_show_modal) {
     item.addEventListener("click", show_modal_gallery);
 }
 function show_modal_gallery(item){
-    console.log(item);
     isModalActive = true;
     document.getElementById('modal-galery').style.display = 'block';
     handleScroll();
