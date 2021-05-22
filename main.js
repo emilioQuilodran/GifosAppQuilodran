@@ -5,7 +5,7 @@ var modal_menu = document.getElementById('modal-menu');
 var modal_gallery = document.getElementById('modal-galery');
 var menu_bars = document.getElementById("menu-bars");
 var menu_times = document.getElementsByClassName("fa-times");
-var theme_btn = document.getElementById('theme-btn');
+var theme_btn = document.getElementsByClassName('theme-btn');
 var body = document.getElementById('body');
 var btn_show_modal = document.getElementsByClassName('max');
 
@@ -40,7 +40,9 @@ function show_modal_gallery(item){
     handleScroll();
 }
 
-theme_btn.addEventListener('click', modeSwitch);
+Array.from(theme_btn).forEach((element)=>{
+    element.addEventListener('click', modeSwitch);
+})
 
 function handleScroll(){
     var body = document.getElementById('body');
@@ -66,6 +68,6 @@ function modeSwitch(){
 function handleTheme(theme){
     if(!theme){
         body.classList.add('dark-mode');
-        theme_btn.innerHTML = "Modo Diurno";
+        //theme_btn.innerHTML = "Modo Diurno";
     }
 }
