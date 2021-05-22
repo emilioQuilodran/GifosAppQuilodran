@@ -188,6 +188,17 @@ body.dark-mode .btn:hover {
   font-weight: 600;
 }
 
+@media screen and (min-width: 901px) {
+  #modal-galery .body {
+    width: 650px;
+    margin: 4% auto;
+  }
+  #modal-galery .body img {
+    margin: 10% 0;
+    width: 650px;
+  }
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;

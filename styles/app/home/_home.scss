@@ -61,3 +61,52 @@
         }
     }
 }
+
+@media screen and (min-width: 901px) {
+    header {
+        padding: 2% 10%;
+        margin-bottom: 5%;
+        #menu-bars {
+            display: none;
+        }
+        .desktop-menu {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            li {
+                margin-left: 30px;
+                a {
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 600;
+                    color: var(--color-primary);
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    .search {
+        width: 650px;
+        margin: 0 auto;
+    }
+    .trend {
+        padding: 5% 0;
+        .gallery {
+            display: flex;
+            justify-content: center;
+            width: 75%;
+            margin: 4% auto 0;
+            padding: 0;
+            .card {
+                margin-left: 40px;
+                &:first-of-type {
+                    margin: 0;
+                }
+            }
+        }
+        img {
+            width: 360px;
+            height: 275px;
+        }
+    }
+}

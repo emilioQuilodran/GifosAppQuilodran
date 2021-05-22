@@ -9,6 +9,9 @@ header {
     i {
         cursor: pointer;
     }
+    .desktop-menu {
+        display: none;
+    }
 }
 footer {
     border-bottom: solid 5px var(--color-primary);

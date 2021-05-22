@@ -327,6 +327,10 @@ header i {
   cursor: pointer;
 }
 
+header .desktop-menu {
+  display: none;
+}
+
 footer {
   border-bottom: solid 5px var(--color-primary);
   padding: 12% 0 5%;
@@ -419,6 +423,63 @@ footer ul li {
 
 .trend .gallery .card {
   margin-left: 20px;
+}
+
+@media screen and (min-width: 901px) {
+  header {
+    padding: 2% 10%;
+    margin-bottom: 5%;
+  }
+  header #menu-bars {
+    display: none;
+  }
+  header .desktop-menu {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  header .desktop-menu li {
+    margin-left: 30px;
+  }
+  header .desktop-menu li a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-transform: uppercase;
+  }
+  .search {
+    width: 650px;
+    margin: 0 auto;
+  }
+  .trend {
+    padding: 5% 0;
+  }
+  .trend .gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 75%;
+    margin: 4% auto 0;
+    padding: 0;
+  }
+  .trend .gallery .card {
+    margin-left: 40px;
+  }
+  .trend .gallery .card:first-of-type {
+    margin: 0;
+  }
+  .trend img {
+    width: 360px;
+    height: 275px;
+  }
 }
 
 .favs, .my-gifs {
@@ -590,6 +651,17 @@ body.dark-mode .btn:hover {
 #modal-galery .body .actions .description .title {
   color: var(--color-third);
   font-weight: 600;
+}
+
+@media screen and (min-width: 901px) {
+  #modal-galery .body {
+    width: 650px;
+    margin: 4% auto;
+  }
+  #modal-galery .body img {
+    margin: 10% 0;
+    width: 650px;
+  }
 }
 
 body {
