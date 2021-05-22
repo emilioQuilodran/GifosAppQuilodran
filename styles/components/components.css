@@ -194,8 +194,8 @@ body.dark-mode .btn:hover {
     margin: 4% auto;
   }
   #modal-galery .body img {
-    margin: 10% 0;
-    width: 650px;
+    margin: 10% auto;
+    width: 480px;
   }
 }
 
