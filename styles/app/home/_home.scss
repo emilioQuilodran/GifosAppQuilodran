@@ -55,9 +55,15 @@
         padding: 10px 0 50px 0;
         display: flex;
         justify-content: flex-start;
-        overflow: hidden;
+        .gifs-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+        .arrow {
+            display: none;
+        }
         .card {
-            margin-left: 20px;
+            margin:0 20px;
         }
     }
 }
@@ -94,14 +100,12 @@
         .gallery {
             display: flex;
             justify-content: center;
-            width: 75%;
             margin: 4% auto 0;
             padding: 0;
-            .card {
-                margin-left: 40px;
-                &:first-of-type {
-                    margin: 0;
-                }
+            overflow: initial;
+            align-items: center;
+            .arrow {
+                display: block;
             }
         }
         img {

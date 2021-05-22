@@ -296,6 +296,7 @@ p {
   height: 40px;
   border-radius: 0;
   cursor: pointer;
+  font-size: 30px;
 }
 
 .arrow i.fa {
@@ -347,6 +348,13 @@ footer ul li {
 }
 
 @media screen and (min-width: 901px) {
+  header .logo {
+    width: 58px;
+    height: 58px;
+  }
+  header .logo p {
+    top: 22px;
+  }
   footer {
     padding: 3% 8.5%;
     display: -webkit-box;
@@ -442,11 +450,23 @@ footer ul li {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  overflow: hidden;
+}
+
+.trend .gallery .gifs-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.trend .gallery .arrow {
+  display: none;
 }
 
 .trend .gallery .card {
-  margin-left: 20px;
+  margin: 0 20px;
 }
 
 @media screen and (min-width: 901px) {
@@ -490,15 +510,15 @@ footer ul li {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 75%;
     margin: 4% auto 0;
     padding: 0;
+    overflow: initial;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .trend .gallery .card {
-    margin-left: 40px;
-  }
-  .trend .gallery .card:first-of-type {
-    margin: 0;
+  .trend .gallery .arrow {
+    display: block;
   }
   .trend img {
     width: 360px;

@@ -26,6 +26,15 @@ footer {
     }
 }
 @media screen and (min-width: 901px) {
+    header {
+        .logo {
+            width: 58px;
+            height: 58px;
+            p {
+                top: 22px;
+            }
+        }
+    }
     footer {
         padding: 3% 8.5%;
         display: flex;
