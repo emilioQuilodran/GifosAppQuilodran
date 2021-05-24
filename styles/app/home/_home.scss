@@ -52,11 +52,12 @@
         margin-bottom: 10px;
     }
     .gallery {
-        padding: 10px 0 50px 0;
-        display: flex;
+        padding: 10px 0 0 0;
         justify-content: flex-start;
+        overflow-x: auto;
+
         .gifs-wrapper {
-            display: flex;
+            display: inline-flex;
             justify-content: center;
         }
         .arrow {
