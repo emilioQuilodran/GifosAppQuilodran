@@ -14,8 +14,6 @@ body {
 }
 
 body.dark-mode {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
   --color-primary: white;
   --color-secondary: #5ED7C6;
   --bgk-primary: #37383C;
@@ -65,8 +63,6 @@ body {
 }
 
 body.dark-mode {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
   --color-primary: white;
   --color-secondary: #5ED7C6;
   --bgk-primary: #37383C;
@@ -214,8 +210,6 @@ body {
 }
 
 body.dark-mode {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
   --color-primary: white;
   --color-secondary: #5ED7C6;
   --bgk-primary: #37383C;

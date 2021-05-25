@@ -10,10 +10,7 @@ body {
     --bkg-card-hover: rgba(87,46,229,0.8);
     --bkg-modal-secondary: #FFFFFF; 
     --color-text-modal: #FFFFFF;
-    
     &.dark-mode {
-        font-family: 'Roboto', sans-serif;
-        font-size: 16px;
         --color-primary: white;
         --color-secondary: #5ED7C6;
         --bgk-primary: #37383C;

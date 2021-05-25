@@ -41,7 +41,19 @@ function show_modal_gallery(item){
 }
 
 Array.from(theme_btn).forEach((element)=>{
-    element.addEventListener('click', modeSwitch);
+    element.addEventListener('click', function(){
+        isLight = !isLight;
+        if(isLight){
+            if(body.classList.contains('dark-mode')){
+                body.classList.remove('dark-mode');
+            }
+            element.innerHTML = "Modo Nocturno";
+        } else {
+            body.classList.add('dark-mode');
+            element.innerHTML = "Modo Diurno";
+        }
+        localStorage.setItem('modo-normal', isLight);
+    });
 })
 
 function handleScroll(){
@@ -51,19 +63,6 @@ function handleScroll(){
     } else {
         body.classList.remove("modal-open"); 
     }
-}
-function modeSwitch(){
-    isLight = !isLight;
-    if(isLight){
-        if(body.classList.contains('dark-mode')){
-            body.classList.remove('dark-mode');
-        }
-        theme_btn.innerHTML = "Modo Nocturno";
-    } else {
-        body.classList.add('dark-mode');
-        theme_btn.innerHTML = "Modo Diurno";
-    }
-    localStorage.setItem('modo-normal', isLight);
 }
 function handleTheme(theme){
     if(!theme){
