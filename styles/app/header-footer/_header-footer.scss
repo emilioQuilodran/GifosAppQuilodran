@@ -1,4 +1,12 @@
 // HEADER
+html {
+    min-height: 100%;
+    position: relative;
+}
+body {
+    margin-bottom: 190px;
+}
+
 header {
     border-top: solid 5px var(--color-primary);
     display: flex;
@@ -17,6 +25,10 @@ footer {
     border-bottom: solid 5px var(--color-primary);
     padding: 12% 0 5%;
     text-align: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
     ul {
         margin: 5% 0;
         li {
@@ -26,7 +38,12 @@ footer {
         }
     }
 }
+
 @media screen and (min-width: 901px) {
+    body {
+        margin-bottom: 145px;
+    }
+
     header {
         .logo {
             width: 58px;
