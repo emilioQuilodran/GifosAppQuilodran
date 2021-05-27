@@ -23,5 +23,25 @@
             font-weight: 600;
             margin-top: 10%;
         }
+        &.no-content {
+            display: block;
+            p {
+                margin-top: 2%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 901px) { 
+    .favs, .my-gifs { 
+        .card {
+            &.-md {
+                margin: 20px;
+            }
+            &.-md, img {
+                width: 260px;
+                height: 200px;
+            }
+        }
     }
 }

@@ -555,6 +555,24 @@ footer ul li {
   margin-top: 10%;
 }
 
+.my-gifs .results.no-content {
+  display: block;
+}
+
+.my-gifs .results.no-content p {
+  margin-top: 2%;
+}
+
+@media screen and (min-width: 901px) {
+  .favs .card.-md, .my-gifs .card.-md {
+    margin: 20px;
+  }
+  .favs .card.-md, .favs .card img, .my-gifs .card.-md, .my-gifs .card img {
+    width: 260px;
+    height: 200px;
+  }
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -791,19 +809,19 @@ body.dark-mode .btn:hover {
       align-self: flex-end;
 }
 
-.card.-sm {
+.card.-md {
   width: 155px;
   height: 120px;
   margin: 3%;
   overflow: hidden;
 }
 
-.card.-sm .overlay {
+.card.-md .overlay {
   padding: 7px;
   bottom: 0;
 }
 
-.card.-sm .overlay .icon {
+.card.-md .overlay .icon {
   width: 30px;
   height: 30px;
   margin-left: 3px;

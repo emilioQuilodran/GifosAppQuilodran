@@ -284,19 +284,19 @@ body.dark-mode .btn:hover {
       align-self: flex-end;
 }
 
-.card.-sm {
+.card.-md {
   width: 155px;
   height: 120px;
   margin: 3%;
   overflow: hidden;
 }
 
-.card.-sm .overlay {
+.card.-md .overlay {
   padding: 7px;
   bottom: 0;
 }
 
-.card.-sm .overlay .icon {
+.card.-md .overlay .icon {
   width: 30px;
   height: 30px;
   margin-left: 3px;
