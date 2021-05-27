@@ -333,6 +333,7 @@ header .desktop-menu {
 footer {
   border-bottom: solid 5px var(--color-primary);
   padding: 12% 0 5%;
+  text-align: center;
 }
 
 footer ul {
@@ -892,5 +893,44 @@ body.dark-mode .btn:hover {
   margin: 10% auto;
   padding: 10%;
   border: solid 1px var(--color-primary);
+}
+
+@media screen and (min-width: 901px) {
+  html {
+    min-height: 100%;
+    position: relative;
+  }
+  body {
+    margin-bottom: 145px;
+  }
+  .create-gifo .screen {
+    width: 700px;
+    height: 400px;
+    padding: 20px;
+    margin: 0 auto 30px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .pagination {
+    margin: 30px 0;
+  }
+  .line {
+    width: 50%;
+    margin: 20px auto;
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

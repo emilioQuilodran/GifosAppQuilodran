@@ -16,3 +16,37 @@
     }
 
 }
+
+@media screen and (min-width: 901px) { 
+    html {
+        min-height: 100%;
+        position: relative;
+    }
+    body {
+        margin-bottom: 145px;
+    }
+    .create-gifo {
+        .screen {
+            width: 700px;
+            height: 400px;
+            padding: 20px;
+            margin: 0 auto 30px auto;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+        }
+    }
+    .pagination {
+        margin: 30px 0;
+    }
+    .line {
+        width: 50%;
+        margin: 20px auto;
+    }
+    footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+}
