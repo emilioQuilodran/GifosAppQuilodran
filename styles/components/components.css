@@ -44,7 +44,7 @@ body.dark-mode footer {
   border-bottom: solid 5px var(--bgk-secondary);
 }
 
-body.dark-mode .btn:hover {
+body.dark-mode .arrow:hover i, body.dark-mode .btn:hover i {
   color: var(--bgk-primary);
 }
 
@@ -93,7 +93,7 @@ body.dark-mode footer {
   border-bottom: solid 5px var(--bgk-secondary);
 }
 
-body.dark-mode .btn:hover {
+body.dark-mode .arrow:hover i, body.dark-mode .btn:hover i {
   color: var(--bgk-primary);
 }
 
@@ -240,7 +240,7 @@ body.dark-mode footer {
   border-bottom: solid 5px var(--bgk-secondary);
 }
 
-body.dark-mode .btn:hover {
+body.dark-mode .arrow:hover i, body.dark-mode .btn:hover i {
   color: var(--bgk-primary);
 }
 

@@ -34,8 +34,10 @@ body {
         footer {
             border-bottom: solid 5px var(--bgk-secondary);
         }
-        .btn:hover {
-            color: var(--bgk-primary);
+        .arrow:hover, .btn:hover {
+            i {
+                color: var(--bgk-primary);
+            }
         }
     }
 }
