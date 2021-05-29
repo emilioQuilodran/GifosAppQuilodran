@@ -21,16 +21,22 @@
         border-radius: 50%;
         &:hover {
             background-color:initial;
-            color: var(--color-primary);
+            span {
+                color: var(--color-primary);
+            }
         }
-        &:active {
+        &.active {
             background-color: var(--color-primary);
-            color: var(--color-text-modal);
+            span {
+                color: var(--color-text-modal);
+            }
         }
     }
     &:hover {
         background-color: var(--color-primary);
-        color: var(--color-text-modal);
+        span {
+            color: var(--color-text-modal);
+        }
     }
 }
 

@@ -35,8 +35,23 @@ body {
             border-bottom: solid 5px var(--bgk-secondary);
         }
         .arrow:hover, .btn:hover {
-            i {
-                color: var(--bgk-primary);
+            i, span {
+                color: var(--color-primary);
+            }
+        }
+        .btn {
+            &.circle {
+                &:hover {
+                    span {
+                        color: var(--color-primary);        
+                    }
+                }
+            }
+            &.active {
+                background-color: var(--color-primary);
+                span {
+                    color: var(--bgk-primary);
+                }
             }
         }
     }

@@ -44,7 +44,19 @@ body.dark-mode footer {
   border-bottom: solid 5px var(--bgk-secondary);
 }
 
-body.dark-mode .arrow:hover i, body.dark-mode .btn:hover i {
+body.dark-mode .arrow:hover i, body.dark-mode .arrow:hover span, body.dark-mode .btn:hover i, body.dark-mode .btn:hover span {
+  color: var(--color-primary);
+}
+
+body.dark-mode .btn.circle:hover span {
+  color: var(--color-primary);
+}
+
+body.dark-mode .btn.active {
+  background-color: var(--color-primary);
+}
+
+body.dark-mode .btn.active span {
   color: var(--bgk-primary);
 }
 
@@ -93,7 +105,19 @@ body.dark-mode footer {
   border-bottom: solid 5px var(--bgk-secondary);
 }
 
-body.dark-mode .arrow:hover i, body.dark-mode .btn:hover i {
+body.dark-mode .arrow:hover i, body.dark-mode .arrow:hover span, body.dark-mode .btn:hover i, body.dark-mode .btn:hover span {
+  color: var(--color-primary);
+}
+
+body.dark-mode .btn.circle:hover span {
+  color: var(--color-primary);
+}
+
+body.dark-mode .btn.active {
+  background-color: var(--color-primary);
+}
+
+body.dark-mode .btn.active span {
   color: var(--bgk-primary);
 }
 
@@ -240,7 +264,19 @@ body.dark-mode footer {
   border-bottom: solid 5px var(--bgk-secondary);
 }
 
-body.dark-mode .arrow:hover i, body.dark-mode .btn:hover i {
+body.dark-mode .arrow:hover i, body.dark-mode .arrow:hover span, body.dark-mode .btn:hover i, body.dark-mode .btn:hover span {
+  color: var(--color-primary);
+}
+
+body.dark-mode .btn.circle:hover span {
+  color: var(--color-primary);
+}
+
+body.dark-mode .btn.active {
+  background-color: var(--color-primary);
+}
+
+body.dark-mode .btn.active span {
   color: var(--bgk-primary);
 }
 
