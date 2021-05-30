@@ -36,18 +36,18 @@ body {
         }
         .arrow:hover, .btn:hover {
             i, span {
-                color: var(--color-primary);
+                color: var(--bgk-primary);
             }
         }
         .btn {
-            &.circle {
+            &.circle, &.add {
                 &:hover {
                     span {
                         color: var(--color-primary);        
                     }
                 }
             }
-            &.active {
+            &.active, &.active:hover {
                 background-color: var(--color-primary);
                 span {
                     color: var(--bgk-primary);

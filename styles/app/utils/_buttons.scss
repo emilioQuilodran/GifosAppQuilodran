@@ -13,6 +13,11 @@
         width: 50px;
         height: 50px;
         border-radius: 50%;
+        &:hover {
+            span, .fa {
+                color: var(--bgk-primary);
+            }
+        }
     }
     &.circle {
         width: 32px;
@@ -34,7 +39,8 @@
     }
     &:hover {
         background-color: var(--color-primary);
-        span {
+        
+        span, i {
             color: var(--color-text-modal);
         }
     }

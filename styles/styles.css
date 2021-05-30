@@ -45,18 +45,18 @@ body.dark-mode footer {
 }
 
 body.dark-mode .arrow:hover i, body.dark-mode .arrow:hover span, body.dark-mode .btn:hover i, body.dark-mode .btn:hover span {
+  color: var(--bgk-primary);
+}
+
+body.dark-mode .btn.circle:hover span, body.dark-mode .btn.add:hover span {
   color: var(--color-primary);
 }
 
-body.dark-mode .btn.circle:hover span {
-  color: var(--color-primary);
-}
-
-body.dark-mode .btn.active {
+body.dark-mode .btn.active, body.dark-mode .btn.active:hover {
   background-color: var(--color-primary);
 }
 
-body.dark-mode .btn.active span {
+body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
   color: var(--bgk-primary);
 }
 
@@ -276,6 +276,10 @@ p {
   border-radius: 50%;
 }
 
+.btn.add:hover span, .btn.add:hover .fa {
+  color: var(--bgk-primary);
+}
+
 .btn.circle {
   width: 32px;
   height: 32px;
@@ -303,7 +307,7 @@ p {
   background-color: var(--color-primary);
 }
 
-.btn:hover span {
+.btn:hover span, .btn:hover i {
   color: var(--color-text-modal);
 }
 
@@ -657,18 +661,18 @@ body.dark-mode footer {
 }
 
 body.dark-mode .arrow:hover i, body.dark-mode .arrow:hover span, body.dark-mode .btn:hover i, body.dark-mode .btn:hover span {
+  color: var(--bgk-primary);
+}
+
+body.dark-mode .btn.circle:hover span, body.dark-mode .btn.add:hover span {
   color: var(--color-primary);
 }
 
-body.dark-mode .btn.circle:hover span {
-  color: var(--color-primary);
-}
-
-body.dark-mode .btn.active {
+body.dark-mode .btn.active, body.dark-mode .btn.active:hover {
   background-color: var(--color-primary);
 }
 
-body.dark-mode .btn.active span {
+body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
   color: var(--bgk-primary);
 }
 
@@ -816,18 +820,18 @@ body.dark-mode footer {
 }
 
 body.dark-mode .arrow:hover i, body.dark-mode .arrow:hover span, body.dark-mode .btn:hover i, body.dark-mode .btn:hover span {
+  color: var(--bgk-primary);
+}
+
+body.dark-mode .btn.circle:hover span, body.dark-mode .btn.add:hover span {
   color: var(--color-primary);
 }
 
-body.dark-mode .btn.circle:hover span {
-  color: var(--color-primary);
-}
-
-body.dark-mode .btn.active {
+body.dark-mode .btn.active, body.dark-mode .btn.active:hover {
   background-color: var(--color-primary);
 }
 
-body.dark-mode .btn.active span {
+body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
   color: var(--bgk-primary);
 }
 
@@ -937,18 +941,18 @@ body.dark-mode footer {
 }
 
 body.dark-mode .arrow:hover i, body.dark-mode .arrow:hover span, body.dark-mode .btn:hover i, body.dark-mode .btn:hover span {
+  color: var(--bgk-primary);
+}
+
+body.dark-mode .btn.circle:hover span, body.dark-mode .btn.add:hover span {
   color: var(--color-primary);
 }
 
-body.dark-mode .btn.circle:hover span {
-  color: var(--color-primary);
-}
-
-body.dark-mode .btn.active {
+body.dark-mode .btn.active, body.dark-mode .btn.active:hover {
   background-color: var(--color-primary);
 }
 
-body.dark-mode .btn.active span {
+body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
   color: var(--bgk-primary);
 }
 

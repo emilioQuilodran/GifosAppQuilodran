@@ -45,18 +45,18 @@ body.dark-mode footer {
 }
 
 body.dark-mode .arrow:hover i, body.dark-mode .arrow:hover span, body.dark-mode .btn:hover i, body.dark-mode .btn:hover span {
+  color: var(--bgk-primary);
+}
+
+body.dark-mode .btn.circle:hover span, body.dark-mode .btn.add:hover span {
   color: var(--color-primary);
 }
 
-body.dark-mode .btn.circle:hover span {
-  color: var(--color-primary);
-}
-
-body.dark-mode .btn.active {
+body.dark-mode .btn.active, body.dark-mode .btn.active:hover {
   background-color: var(--color-primary);
 }
 
-body.dark-mode .btn.active span {
+body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
   color: var(--bgk-primary);
 }
 
@@ -106,18 +106,18 @@ body.dark-mode footer {
 }
 
 body.dark-mode .arrow:hover i, body.dark-mode .arrow:hover span, body.dark-mode .btn:hover i, body.dark-mode .btn:hover span {
+  color: var(--bgk-primary);
+}
+
+body.dark-mode .btn.circle:hover span, body.dark-mode .btn.add:hover span {
   color: var(--color-primary);
 }
 
-body.dark-mode .btn.circle:hover span {
-  color: var(--color-primary);
-}
-
-body.dark-mode .btn.active {
+body.dark-mode .btn.active, body.dark-mode .btn.active:hover {
   background-color: var(--color-primary);
 }
 
-body.dark-mode .btn.active span {
+body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
   color: var(--bgk-primary);
 }
 
@@ -265,18 +265,18 @@ body.dark-mode footer {
 }
 
 body.dark-mode .arrow:hover i, body.dark-mode .arrow:hover span, body.dark-mode .btn:hover i, body.dark-mode .btn:hover span {
+  color: var(--bgk-primary);
+}
+
+body.dark-mode .btn.circle:hover span, body.dark-mode .btn.add:hover span {
   color: var(--color-primary);
 }
 
-body.dark-mode .btn.circle:hover span {
-  color: var(--color-primary);
-}
-
-body.dark-mode .btn.active {
+body.dark-mode .btn.active, body.dark-mode .btn.active:hover {
   background-color: var(--color-primary);
 }
 
-body.dark-mode .btn.active span {
+body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
   color: var(--bgk-primary);
 }
 
