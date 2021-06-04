@@ -176,6 +176,10 @@ body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
   margin: 20% auto 0;
 }
 
+#modal-galery .body .arrow {
+  display: none;
+}
+
 #modal-galery .body img {
   margin: 20% 0 5%;
 }
@@ -212,6 +216,17 @@ body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
   #modal-galery .body {
     width: 650px;
     margin: 4% auto;
+    position: relative;
+  }
+  #modal-galery .body .arrow {
+    display: block;
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    right: 0;
+  }
+  #modal-galery .body .arrow:nth-child(2) {
+    left: 0;
   }
   #modal-galery .body img {
     margin: 10% auto;
