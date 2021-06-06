@@ -490,7 +490,7 @@ footer ul li {
   overflow-x: auto;
 }
 
-.trend .gallery .gifs-wrapper {
+.trend .gallery #gifs-wrapper {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -505,6 +505,11 @@ footer ul li {
 
 .trend .gallery .card {
   margin: 0 20px;
+}
+
+.trend img {
+  width: auto;
+  height: 275px;
 }
 
 @media screen and (min-width: 901px) {
@@ -555,12 +560,12 @@ footer ul li {
         -ms-flex-align: center;
             align-items: center;
   }
+  .trend .gallery #gifs-wrapper {
+    width: 89%;
+    overflow-x: auto;
+  }
   .trend .gallery .arrow {
     display: block;
-  }
-  .trend img {
-    width: 360px;
-    height: 275px;
   }
 }
 
