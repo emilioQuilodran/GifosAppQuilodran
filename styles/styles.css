@@ -790,7 +790,7 @@ body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
   }
   #modal-galery .body img {
     margin: 10% auto;
-    width: 480px;
+    height: 350px;
   }
 }
 

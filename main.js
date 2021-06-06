@@ -34,9 +34,14 @@ for (const item of menu_times) {
 for (const item of btn_show_modal) {
     item.addEventListener("click", show_modal_gallery);
 }
-function show_modal_gallery(item){
+function show_modal_gallery(data){
     isModalActive = true;
-    document.getElementById('modal-galery').style.display = 'block';
+    let gallery = document.getElementById('modal-galery');
+    gallery.style.display = 'block';
+    gallery.getElementsByTagName('img')[0].src = data.image;
+    console.log();
+    gallery.getElementsByClassName("description")[0].firstElementChild.innerHTML = data.user;
+    gallery.getElementsByClassName("description")[0].lastElementChild.innerHTML = data.title;
     handleScroll();
 }
 
