@@ -1,5 +1,5 @@
 const API_KEY = "XGMkpQW6W1QmHi6JVBxC74piBVnC6cXF";
-var url_trending = `https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=3`;
+var url_trending = `https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}`;
 
 var gifs_array = new Array();
 let template_cards = new Array();
