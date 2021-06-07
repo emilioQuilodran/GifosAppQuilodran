@@ -214,7 +214,7 @@ body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
 
 @media screen and (min-width: 901px) {
   #modal-galery .body {
-    width: 650px;
+    width: 600px;
     margin: 4% auto;
     position: relative;
   }
@@ -223,14 +223,14 @@ body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
     position: absolute;
     top: 50%;
     margin-top: -40px;
-    right: 0;
+    right: 5%;
   }
   #modal-galery .body .arrow:nth-child(2) {
-    left: 0;
+    left: 5%;
   }
   #modal-galery .body img {
     margin: 10% auto;
-    height: 350px;
+    width: 350px;
   }
 }
 

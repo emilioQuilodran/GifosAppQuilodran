@@ -497,6 +497,7 @@ footer ul li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
 }
 
 .trend .gallery .arrow {
@@ -509,7 +510,7 @@ footer ul li {
 
 .trend img {
   width: auto;
-  height: 275px;
+  height: 350px;
 }
 
 @media screen and (min-width: 901px) {
@@ -550,9 +551,8 @@ footer ul li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     margin: 4% auto 0;
     padding: 0;
     overflow: initial;
@@ -561,7 +561,7 @@ footer ul li {
             align-items: center;
   }
   .trend .gallery #gifs-wrapper {
-    width: 89%;
+    width: 80%;
     overflow-x: auto;
   }
   .trend .gallery .arrow {
@@ -774,7 +774,7 @@ body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
 
 @media screen and (min-width: 901px) {
   #modal-galery .body {
-    width: 650px;
+    width: 600px;
     margin: 4% auto;
     position: relative;
   }
@@ -783,14 +783,14 @@ body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
     position: absolute;
     top: 50%;
     margin-top: -40px;
-    right: 0;
+    right: 5%;
   }
   #modal-galery .body .arrow:nth-child(2) {
-    left: 0;
+    left: 5%;
   }
   #modal-galery .body img {
     margin: 10% auto;
-    height: 350px;
+    width: 350px;
   }
 }
 

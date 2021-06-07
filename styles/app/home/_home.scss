@@ -59,6 +59,7 @@
         #gifs-wrapper {
             display: inline-flex;
             justify-content: center;
+            overflow: hidden;
         }
         .arrow {
             display: none;
@@ -69,7 +70,7 @@
     }
     img {
         width: auto;
-        height: 275px;
+        height: 350px;
     }
 }
 
@@ -104,13 +105,13 @@
         padding: 5% 0;
         .gallery {
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             margin: 4% auto 0;
             padding: 0;
             overflow: initial;
             align-items: center;
             #gifs-wrapper{
-                width: 89%;
+                width: 80%;
                 overflow-x: auto;
             }
             .arrow {
