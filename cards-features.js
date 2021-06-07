@@ -23,22 +23,22 @@ async function my_fetch(){
                 gifs_array.push(card);
                 let template = create_card(card);
                 trend_container.appendChild(template);
-                btn_like_collection = document.getElementsByClassName('like');
+                btn_like_collection =document.getElementById('modal-galery').getElementsByClassName('like');
+                btn_download_collection = document.getElementById('modal-galery').getElementsByClassName('download');
                 btn_show_modal = document.getElementsByClassName('max');
-                btn_download_collection = document.getElementsByClassName('download');
             }
 
             for(const item of btn_download_collection){
                 item.addEventListener("click", function() {
                     let item_info = item.parentNode.parentNode.parentNode;
-                    console.log(item_info);
+                    console.log("download gif");
                 });
             }
             for (const item of btn_like_collection) {
                 // TODO: save info in favs
                 let item_info = item.parentNode.parentNode.parentNode;
                 item.addEventListener("click", function(){
-                    console.log(item_info);
+                    console.log("like feaure");
                     has_liked = !has_liked;
                     has_liked ? item.classList.add("active") : item.classList.remove("active");
                 })
@@ -52,7 +52,7 @@ async function my_fetch(){
                         title: item_info.childNodes[0].childNodes[1].lastChild.innerHTML,
                         image: img_src 
                     }
-                    console.log(info_card);
+                    console.log("opn modal");
                     show_modal_gallery(info_card);
                 })
             }

@@ -40,8 +40,30 @@ body {
     &.modal-open {
         overflow: hidden;
     }
-}
 
+    .trend {
+        .gallery {
+            #gifs-wrapper {
+                .card {
+                    .icon {
+                        &.like {
+                            &:hover {
+                                background-image: url("../images/icons-card/icon-fav.svg");
+                                cursor:default;
+                            }
+                        }
+                        &.download {
+                            &:hover {
+                                background-image: url("../images/icons-card/icon-download.svg");
+                                cursor:default;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 h1 { font-size: 2.6rem; }
 h2 { font-size: 2.2rem; }
 h3 { font-size: 2.0rem; }

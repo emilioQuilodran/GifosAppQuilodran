@@ -56,17 +56,16 @@ function handleScroll(){
 function handleTheme(theme){
     if(!theme){
         body.classList.add('dark-mode');
-        console.log(theme_btn, "asd");
         Array.from(theme_btn).forEach((el)=>{
             body.classList.add('dark-mode');
-            console.log(el.innerHTML = "Modo Diurno");
+            el.innerHTML = "Modo Diurno";
         });
     } else {
         Array.from(theme_btn).forEach((el)=>{
             if(body.classList.contains('dark-mode')){
                 body.classList.remove('dark-mode');
             }
-            console.log(el.innerHTML = "Modo Nocturno");
+            el.innerHTML = "Modo Nocturno";
         });
     }
 }
