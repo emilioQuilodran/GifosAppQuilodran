@@ -45,22 +45,6 @@ function show_modal_gallery(data){
     handleScroll();
 }
 
-Array.from(theme_btn).forEach((element)=>{
-    element.addEventListener('click', function(){
-        isLight = !isLight;
-        if(isLight){
-            if(body.classList.contains('dark-mode')){
-                body.classList.remove('dark-mode');
-            }
-            element.innerHTML = "Modo Nocturno";
-        } else {
-            body.classList.add('dark-mode');
-            element.innerHTML = "Modo Diurno";
-        }
-        localStorage.setItem('modo-normal', isLight);
-    });
-})
-
 function handleScroll(){
     var body = document.getElementById('body');
     if(isModalActive){
@@ -72,6 +56,25 @@ function handleScroll(){
 function handleTheme(theme){
     if(!theme){
         body.classList.add('dark-mode');
-        //theme_btn.innerHTML = "Modo Diurno";
+        console.log(theme_btn, "asd");
+        Array.from(theme_btn).forEach((el)=>{
+            body.classList.add('dark-mode');
+            console.log(el.innerHTML = "Modo Diurno");
+        });
+    } else {
+        Array.from(theme_btn).forEach((el)=>{
+            if(body.classList.contains('dark-mode')){
+                body.classList.remove('dark-mode');
+            }
+            console.log(el.innerHTML = "Modo Nocturno");
+        });
     }
 }
+
+Array.from(theme_btn).forEach((element)=>{
+    element.addEventListener('click', function(){
+        isLight = !isLight;
+        handleTheme(isLight)
+        localStorage.setItem('modo-normal', isLight);
+    });
+})
