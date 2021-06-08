@@ -7,7 +7,8 @@ var menu_bars = document.getElementById("menu-bars");
 var menu_times = document.getElementsByClassName("fa-times");
 var theme_btn = document.getElementsByClassName('theme-btn');
 var body = document.getElementById('body');
-var btn_show_modal = document.getElementsByClassName('max');
+var btn_like_collection = document.getElementById('modal-galery').getElementsByClassName('like');
+var btn_download_collection = document.getElementById('modal-galery').getElementsByClassName('download');
 
 let isModalActive = false;
 let isLight;
@@ -31,18 +32,22 @@ for (const item of menu_times) {
         handleScroll();
     })   
 }
-for (const item of btn_show_modal) {
-    item.addEventListener("click", show_modal_gallery);
-}
-function show_modal_gallery(data){
+
+var currentObject;
+function show_modal_gallery(id){
     isModalActive = true;
     let gallery = document.getElementById('modal-galery');
     gallery.style.display = 'block';
-    gallery.getElementsByTagName('img')[0].src = data.image;
-    console.log();
-    gallery.getElementsByClassName("description")[0].firstElementChild.innerHTML = data.user;
-    gallery.getElementsByClassName("description")[0].lastElementChild.innerHTML = data.title;
-    handleScroll();
+    Array.from(gifs_array).forEach((el)=>{
+        if(el.id === id) {
+            currentObject = el;
+            gallery.getElementsByTagName('img')[0].src = el.source_image;
+            gallery.getElementsByClassName("description")[0].firstElementChild.innerHTML = el.user != "" ? el.user : "User";
+            gallery.getElementsByClassName("description")[0].lastElementChild.innerHTML = el.title;
+            handleScroll();
+        };
+    });
+    console.log(currentObject);
 }
 
 function handleScroll(){
@@ -77,3 +82,21 @@ Array.from(theme_btn).forEach((element)=>{
         localStorage.setItem('modo-normal', isLight);
     });
 })
+
+
+for (const item of btn_like_collection) {
+    // TODO: save info in favs
+    let item_info = item.parentNode.parentNode.parentNode;
+    item.addEventListener("click", function(){
+        console.log("like feaure");
+        has_liked = !has_liked;
+        has_liked ? item.classList.add("active") : item.classList.remove("active");
+    })
+};
+
+for(const item of btn_download_collection){
+    item.addEventListener("click", function() {
+        let item_info = item.parentNode.parentNode.parentNode;
+        console.log("download gif" , item_info);
+    });
+}

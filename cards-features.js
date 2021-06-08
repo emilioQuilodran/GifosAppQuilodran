@@ -5,82 +5,73 @@ var gifs_array = new Array();
 let template_cards = new Array();
 let trend_container = document.getElementById("gifs-wrapper");
 let modal_gallery_template = document.getElementById("modal-galery");
-var btn_show_modal;
-var btn_like_collection;
-var btn_download_collection;
+var btn_show_modal = document.getElementsByClassName('max');
 var has_liked;
 var card;
 
 // Trendings feature
-async function my_fetch(){
-    try {
-        await fetch(url_trending)
-        .then( response => response.json() )
-        .then( response => {
-            for(const item of response.data){
-                // fix username: when content is blank
-                card = new GifCard(item.username, item.title, item.images.original.url);
-                gifs_array.push(card);
-                let template = create_card(card);
-                trend_container.appendChild(template);
-                btn_like_collection =document.getElementById('modal-galery').getElementsByClassName('like');
-                btn_download_collection = document.getElementById('modal-galery').getElementsByClassName('download');
-                btn_show_modal = document.getElementsByClassName('max');
-            }
-
-            for(const item of btn_download_collection){
-                item.addEventListener("click", function() {
-                    let item_info = item.parentNode.parentNode.parentNode;
-                    console.log("download gif");
-                });
-            }
-            for (const item of btn_like_collection) {
-                // TODO: save info in favs
-                let item_info = item.parentNode.parentNode.parentNode;
-                item.addEventListener("click", function(){
-                    console.log("like feaure");
-                    has_liked = !has_liked;
-                    has_liked ? item.classList.add("active") : item.classList.remove("active");
-                })
-            };
-            for (const item of btn_show_modal) {
-                item.addEventListener("click", function(){
-                    let item_info = item.parentNode.parentNode.parentNode;
-                    let img_src = item_info.childNodes[1].src;
-                    let info_card = {
-                        user: item_info.childNodes[0].childNodes[1].firstChild.innerHTML,
-                        title: item_info.childNodes[0].childNodes[1].lastChild.innerHTML,
-                        image: img_src 
-                    }
-                    console.log("opn modal");
-                    show_modal_gallery(info_card);
-                })
-            }
-        });
-    } catch (error) {
-        throw new Error(`HTTP error! status:`);
-    }
+function my_fetch(url_trending){
+    fetch(url_trending)
+    .then( response => response.json() )
+    .then( response => {
+        for(const item of response.data){
+            // fix username: when content is blank
+            card = new GifCard(item.id, item.username, item.title, item.images.original.url);
+            gifs_array.push(card);
+            let template = create_card(card);
+            trend_container.appendChild(template);
+        }
+    })
+    .catch(e => {
+        console.log('There has been a problem with your fetch operation: ' + e.message);
+      });
 }
-
-my_fetch()
-.catch(e => {
-  console.log('There has been a problem with your fetch operation: ' + e.message);
-});
+my_fetch(url_trending);
 
 class GifCard {
-    constructor(user, title, source_image){
+    constructor(id, user, title, source_image){
+        this.id = id;
         this.user = user;
         this.title = title;
         this.source_image = source_image;
+        this.isFavorite = false;
+    }
+    getUser(){
+        return this.user;
+    }
+    setUser(user){
+        this.user = user;
+    }
+    getTitle(){
+        return this.title;
+    }
+    setTitle(title){
+        this.title = title;
+    }
+    getImage(){
+        return this.source_image;
+    }
+    setImage(src){
+        this.source_image = src;
+    }
+    getFavorite(){
+        return this.isFavorite;
+    }
+    setFavorite(val){
+        this.isFavorite = val;
     }
 }
 
 function create_card(item){
     let card = document.createElement('div');
+    let id = document.createElement('span');
     let gif = document.createElement('img');
     let overlay = create_card_info(item);
     card.classList.add('card');
     card.appendChild(overlay);
+    id.style.display = 'none';
+    id.innerHTML = item.id;
+    card.appendChild(id);
     gif.setAttribute("src", item.source_image);
     gif.setAttribute("alt", item.title);
     card.appendChild(gif);
@@ -100,6 +91,11 @@ function create_card_info(item){
     
     like.classList.add('icon');
     like.classList.add('like');
+    if(item.isFavorite){
+        like.classList.add('active');
+    } else {
+        like.classList.remove('active');
+    }
     download.classList.add('icon');
     download.classList.add('download');
     max.classList.add('icon');
@@ -114,5 +110,11 @@ function create_card_info(item){
 
     overlay.appendChild(actions);
     overlay.appendChild(info);
+    
+    max.addEventListener("click", function(){
+        let id = item.id;
+        console.log(id);
+        show_modal_gallery(id);
+    })
     return overlay;
 }
