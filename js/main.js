@@ -1,4 +1,5 @@
 'use strict';
+const API_KEY = "XGMkpQW6W1QmHi6JVBxC74piBVnC6cXF";
 
 // handle header modal
 var modal_menu = document.getElementById('modal-menu');

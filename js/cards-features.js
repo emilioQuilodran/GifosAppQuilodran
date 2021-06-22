@@ -1,4 +1,3 @@
-const API_KEY = "XGMkpQW6W1QmHi6JVBxC74piBVnC6cXF";
 var url_trending = `https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=6`;
 
 var gifs_array = new Array();

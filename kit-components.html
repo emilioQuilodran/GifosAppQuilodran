@@ -8,9 +8,8 @@
     <script src="https://use.fontawesome.com/be318f33e9.js"></script>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/components/components.css">
-    <!--<link id="theme-style" rel="stylesheet" type="text/css" href="styles/app/dark.css">-->
 </head>
-<body class="dark-mode">
+<body id="body">
     <main>
         <h1>UI Kit</h1>
         <div class="container">
@@ -24,7 +23,7 @@
             <hr>
             <br>
             <br>
-            <h3>Empecemos por los elementos mas chicos o "Atomos"</h3>
+            <h3>"Atomos"</h3>
             <p>
                 Un buen ejercicio es tomar lápiz y papel, comenzar a diagramar el diseño de nuestra aplicacion.
                 A lo largo del flujo de ésta , vamos a poder identificar elementos que se repiten.
@@ -45,7 +44,7 @@
                         <a class="btn add">
                             <i class="fa fa-plus"></i>
                         </a>
-                        <a class="btn">ver más</a>
+                        <a href="#" class="btn"><span>ver más</span></a>
                         <div class="arrow">
                             <i class="fa fa-times 3x"></i>
                         </div>
@@ -74,16 +73,17 @@
                         </div>
                     </div>
                 </div>
+            </section>
+            
+            <section class="components">
+                <section class="intro">
+                    <h3>"Moleculas"</h3>
+                    <p>
+                        Cuando combinamos los atomos, las cosas se vuelven más tangibles.
+                        <em> ejemplos: busqueda -> label + input + botón</em>
+                    </p>
+                </section>
                 <div class="grid">
-                    <div class="box">
-                        <h6>icons card</h6>
-                        <div class="center">
-                            <span class="icon like"></span>
-                            <span class="icon like active"></span>
-                            <span class="icon download"></span>
-                            <span class="icon max"></span>
-                        </div>
-                    </div>
                     <div class="box">
                         <h6>Pagination</h6>
                         <div class="center">
@@ -94,11 +94,6 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="components">
-                <h5>Componentes</h5>
-                <div class="grid">
                     <div class="box">
                         <h6>Cards</h6>
                         <div class="card">
@@ -117,12 +112,156 @@
                         </div>
                     </div>
                     <div class="box">
-                        
+                        <h6>Busqueda</h6>
+                        <section class="search">
+                            <div class="search-component">
+                                <img src="images/ilustra_header.svg" alt="">
+                                <i class="fa fa-search"></i>
+                                <input type="text" name="search" id="search" placeholder="Busca GIFOS y más">
+                            </div>
+                        </section>
                     </div>
                 </div>
             </section>
+            <section class="components">
+                <section class="intro">
+                    <h3>"Organismos"</h3>
+                    <p>
+                        Estos son el conjunto de moleculas que se unen para conformar secciones distintas de una interfaz
+                        <em> feature de autocomplete y busqueda</em>
+                    </p>
+                </section>
+                <div class="grid">
+                    <div class="box">
+                        <h6>modal + card</h6>
+                        <div class="card">
+                            <div class="overlay">
+                                <div>
+                                    <span class="icon like"></span>
+                                    <span class="icon download"></span>
+                                    <span class="icon max"></span>
+                                </div>
+                                <div>
+                                    <p>User</p>
+                                    <h6>Titulo GIFO</h6>
+                                </div>
+                            </div>
+                            <img src="https://placehold.co/245x185/png" alt="">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h6>Busqueda</h6>
+                        <section class="search">
+                            <div class="search-component">
+                                <img src="images/ilustra_header.svg" alt="">
+                                <i class="fa fa-search"></i>
+                                <input type="text" name="search" id="search" placeholder="Busca GIFOS y más">
+                            </div>
+                        </section>
+                    </div>
+                    <div class="box">
+                        <h6>header + modal : navegación</h6>
+                        <header>
+                            <div class="logo">
+                                <a href="index.html">
+                                    <p>KrolGifs</p>
+                                </a>
+                            </div>
+                            <i id="menu-bars" class="fa fa-bars fa-lg"></i>
+                            <ul class="desktop-menu">
+                                <li>
+                                    <a class="link theme-btn" href="#" >Modo Nocturno</a>
+                                </li>
+                                <li>
+                                    <a class="link" href="mis-favoritos.html">Favoritos</a>
+                                </li>
+                                <li>
+                                    <a class="link" href="mis-gifos.html">Mis Gifs</a>
+                                </li>
+                                <li>
+                                    <a class="btn add" href="crear-gifo.html">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </header>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <section class="components">
+                <section class="intro">
+                    <h3>"Templates"</h3>
+                    <p>
+                        En esencia, lo que consideraríamos “plantillas” dentro del Atomic Design no dejarían de ser los wireframes: una unión de distintos organismos que forman una página o una aplicación.
+                    </p>
+                    <p>Se trata de un entregable de alta fidelidad, pero que no termina de ser el diseño final. Para que nos entendamos, se trata del “esqueleto” de la aplicación o página web.</p>
+                </section>
+                
+            </section>
+            <br><br><br>
+            <section class="components">
+                <section class="intro">
+                    <h3>"Sistema"</h3>
+                    <p>
+                        El sistema se conforma con el conjunto de organismos. Por ejemplo, un conjunto de plantillas formaría la web. El conjunto de pantallas y acciones construye una app. El sistema, por lo tanto, sería la suma del todo lo anterior. Es el resultado final; la web, la aplicación, el software o cualquier producto digital que estemos desarrollando.
+                    </p>
+                </section>
+            </section>
         </div>
     </main>
-    <script src="main.js" type="text/javascript"></script>
+    <section id="modal-menu" class="modal">
+        <div class="modal-content">
+            <header>
+                <div class="logo">
+                    <p>KrolGifs</p>
+                </div>
+                <i id="menu-times" class="fa fa-times fa-lg"></i>
+            </header>
+            <div class="body">
+                <nav>
+                    <ul>
+                        <li>
+                            <a class="theme-btn" href="#">Modo Nocturno</a>
+                        </li>
+                        <li>
+                            <a href="mis-favoritos.html">Favoritos</a>
+                        </li>
+                        <li>
+                            <a href="mis-gifos.html">Mis Gifs</a>
+                        </li>
+                        <li>
+                            <a href="crear-gifo.html">Crear Gifo</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <section id="modal-galery" class="modal">
+        <div class="modal-content">
+            <div class="body">
+                <i class="fa fa-times fa-lg"></i>
+                <div class="arrow">
+                    <i class="fa fa-angle-left"></i>
+                </div>
+                <img src="https://placehold.co/245x185/png" alt="">
+                <div class="arrow">
+                    <i class="fa fa-angle-right"></i>
+                </div>
+                <div class="actions">
+                <div class="description">
+                    <p>User</p>
+                    <p class="title">Titulo Gifo</p>
+                </div>
+                <div>
+                    <span class="icon like"></span>
+                    <span class="icon download"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./js/main.js"></script>
+    <script src="./js/cards-features.js"></script>
 </body>
 </html>

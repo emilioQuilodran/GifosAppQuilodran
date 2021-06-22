@@ -411,4 +411,8 @@ body main .grid .box > div.center {
 body main .grid .box:first-child {
   margin: 0;
 }
+
+body main .search {
+  width: 300px;
+}
 /*# sourceMappingURL=components.css.map */
