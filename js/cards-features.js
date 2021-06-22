@@ -1,11 +1,13 @@
 const API_KEY = "XGMkpQW6W1QmHi6JVBxC74piBVnC6cXF";
-var url_trending = `https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=3`;
+var url_trending = `https://api.giphy.com/v1/gifs/trending?api_key=${API_KEY}&limit=6`;
 
 var gifs_array = new Array();
 let template_cards = new Array();
 let trend_container = document.getElementById("gifs-wrapper");
 let modal_gallery_template = document.getElementById("modal-galery");
 var btn_show_modal = document.getElementsByClassName('max');
+var btn_like_collection = document.getElementById('modal-galery').getElementsByClassName('like');
+var btn_download_collection = document.getElementById('modal-galery').getElementsByClassName('download');
 var has_liked;
 var card;
 
@@ -117,4 +119,21 @@ function create_card_info(item){
         show_modal_gallery(id);
     })
     return overlay;
+}
+
+for (const item of btn_like_collection) {
+    // TODO: save info in favs
+    let item_info = item.parentNode.parentNode.parentNode;
+    item.addEventListener("click", function(){
+        console.log("like feaure");
+        has_liked = !has_liked;
+        has_liked ? item.classList.add("active") : item.classList.remove("active");
+    })
+};
+
+for(const item of btn_download_collection){
+    item.addEventListener("click", function() {
+        let item_info = item.parentNode.parentNode.parentNode;
+        console.log("download gif" , item_info);
+    });
 }
