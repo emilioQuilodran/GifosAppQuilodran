@@ -629,6 +629,12 @@ footer ul li {
   }
   .trend .gallery #gifs-wrapper {
     width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
     overflow-x: auto;
   }
   .trend .gallery .arrow {

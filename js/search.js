@@ -18,8 +18,7 @@ input.addEventListener('keyup', function(e){
         icon_search.classList.remove('fa-times');
         icon_search.classList.add('fa-search');
         search_component.classList.remove('active');
-        console.log(value);
-        search(value);
+        window.onliad = search(value);
     }
 });
 
@@ -41,10 +40,8 @@ function search(query){
     .then(response => {
         let title = search_component.nextElementSibling;
         title.innerHTML = query
-        console.log(title);
-        
+        results_container.innerHTML = "";
         for(const item of response.data){
-            gifs_array.push(card);
             card = new GifCard(item.id, item.username, item.title, item.images.original.url);
             gifs_search_response.push(card);
             let template = create_card(card, "-md");

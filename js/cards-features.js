@@ -27,7 +27,7 @@ function my_fetch(url_trending){
         console.log('There has been a problem with your fetch operation: ' + e.message);
       });
 }
-my_fetch(url_trending);
+window.onload = my_fetch(url_trending);
 
 class GifCard {
     constructor(id, user, title, source_image){
