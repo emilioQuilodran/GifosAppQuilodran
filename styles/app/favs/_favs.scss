@@ -1,4 +1,4 @@
-.favs, .my-gifs {
+.favs, .my-gifs, .search {
     padding-bottom: 5%;
     .results {
         margin: 5% 0;
@@ -33,7 +33,7 @@
 }
 
 @media screen and (min-width: 901px) { 
-    .favs, .my-gifs { 
+    .favs, .my-gifs, .search { 
         .card {
             &.-md {
                 margin: 20px;

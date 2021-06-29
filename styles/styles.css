@@ -437,6 +437,10 @@ footer ul li {
   color: var(--color-secondary);
 }
 
+.search #results h2 {
+  margin-bottom: 30px;
+}
+
 .search .search-component {
   position: relative;
   margin: 10% 0;
@@ -451,7 +455,7 @@ footer ul li {
   position: relative;
 }
 
-.search .search-component .input-content > .fa-search {
+.search .search-component .input-content > .fa-search, .search .search-component .input-content > .fa-times {
   position: absolute;
   bottom: 19px;
   z-index: 1;
@@ -597,6 +601,12 @@ footer ul li {
     text-transform: uppercase;
   }
   .search {
+    margin: 0 auto;
+  }
+  .search #results {
+    margin: 2% auto;
+  }
+  .search .search-component {
     width: 650px;
     margin: 0 auto;
   }
@@ -625,11 +635,11 @@ footer ul li {
   }
 }
 
-.favs, .my-gifs {
+.favs, .my-gifs, .search {
   padding-bottom: 5%;
 }
 
-.favs .results, .my-gifs .results {
+.favs .results, .my-gifs .results, .search .results {
   margin: 5% 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -643,7 +653,7 @@ footer ul li {
           justify-content: center;
 }
 
-.favs .results .item, .my-gifs .results .item {
+.favs .results .item, .my-gifs .results .item, .search .results .item {
   margin: 4%;
   width: 155px;
   height: 120px;
@@ -667,10 +677,10 @@ footer ul li {
 }
 
 @media screen and (min-width: 901px) {
-  .favs .card.-md, .my-gifs .card.-md {
+  .favs .card.-md, .my-gifs .card.-md, .search .card.-md {
     margin: 20px;
   }
-  .favs .card.-md, .favs .card img, .my-gifs .card.-md, .my-gifs .card img {
+  .favs .card.-md, .favs .card img, .my-gifs .card.-md, .my-gifs .card img, .search .card.-md, .search .card img {
     width: 260px;
     height: 200px;
   }

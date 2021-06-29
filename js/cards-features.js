@@ -19,7 +19,7 @@ function my_fetch(url_trending){
             // fix username: when content is blank
             card = new GifCard(item.id, item.username, item.title, item.images.original.url);
             gifs_array.push(card);
-            let template = create_card(card);
+            let template = create_card(card, "-lg");
             trend_container.appendChild(template);
         }
     })
@@ -63,12 +63,13 @@ class GifCard {
     }
 }
 
-function create_card(item){
+function create_card(item, size){
     let card = document.createElement('div');
     let id = document.createElement('span');
     let gif = document.createElement('img');
     let overlay = create_card_info(item);
     card.classList.add('card');
+    card.classList.add(size)
     card.appendChild(overlay);
     id.style.display = 'none';
     id.innerHTML = item.id;
