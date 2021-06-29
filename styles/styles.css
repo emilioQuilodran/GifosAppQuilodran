@@ -605,6 +605,7 @@ footer ul li {
   }
   .search #results {
     margin: 2% auto;
+    width: 1280px;
   }
   .search .search-component {
     width: 650px;
