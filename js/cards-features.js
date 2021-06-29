@@ -4,9 +4,9 @@ var gifs_array = new Array();
 let template_cards = new Array();
 let trend_container = document.getElementById("gifs-wrapper");
 let modal_gallery_template = document.getElementById("modal-galery");
-var btn_show_modal = document.getElementsByClassName('max');
-var btn_like_collection = document.getElementById('modal-galery').getElementsByClassName('like');
-var btn_download_collection = document.getElementById('modal-galery').getElementsByClassName('download');
+let btn_show_modal = document.getElementsByClassName('max');
+let btn_like_collection = document.getElementById('modal-galery').getElementsByClassName('like');
+let btn_download_collection = document.getElementById('modal-galery').getElementsByClassName('download');
 var has_liked;
 var card;
 
@@ -114,9 +114,7 @@ function create_card_info(item){
     overlay.appendChild(info);
     
     max.addEventListener("click", function(){
-        let id = item.id;
-        console.log(id);
-        show_modal_gallery(id);
+        show_modal_gallery(item);
     })
     return overlay;
 }

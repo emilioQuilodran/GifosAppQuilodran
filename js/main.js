@@ -26,20 +26,18 @@ for (const item of menu_times) {
     })   
 }
 
-var currentObject;
-function show_modal_gallery(id){
+function show_modal_gallery(item){
+    let currentObject = item;
+
     isModalActive = true;
+    console.log("hola , objeto: " + item);
     let gallery = document.getElementById('modal-galery');
     gallery.style.display = 'block';
-    Array.from(gifs_array).forEach((el)=>{
-        if(el.id === id) {
-            currentObject = el;
-            gallery.getElementsByTagName('img')[0].src = el.source_image;
-            gallery.getElementsByClassName("description")[0].firstElementChild.innerHTML = el.user != "" ? el.user : "User";
-            gallery.getElementsByClassName("description")[0].lastElementChild.innerHTML = el.title;
-            handleScroll();
-        };
-    });
+    gallery.getElementsByTagName('img')[0].src = item.source_image;
+    gallery.getElementsByClassName("description")[0].firstElementChild.innerHTML = item.user != "" ? item.user : "User";
+    gallery.getElementsByClassName("description")[0].lastElementChild.innerHTML = item.title;
+    handleScroll();
+
     console.log(currentObject);
 }
 

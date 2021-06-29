@@ -6,6 +6,14 @@ var search_component = document.getElementsByClassName('search-component')[0];
 var categories = document.getElementsByClassName('categories')[0];
 var icon_search = search_component.children[1].children[0];
 var results_container = document.getElementById('results');
+var search_container = document.getElementById('search-tmp');
+let btn = document.createElement('a');
+btn_text = document.createElement('span');
+btn_text.innerHTML = "ver más";
+btn.appendChild(btn_text);
+btn.classList.add('btn');
+btn.style.display = "none";
+search_container.append(btn);
 
 input.addEventListener('keyup', function(e){
     e.preventDefault();
@@ -39,8 +47,11 @@ function search(query){
     .then(response => response.json())
     .then(response => {
         let title = search_component.nextElementSibling;
-        title.innerHTML = query
+        title.innerHTML = query;
         results_container.innerHTML = "";
+        btn.style.display = "inline-block";
+        categories.remove();
+
         for(const item of response.data){
             card = new GifCard(item.id, item.username, item.title, item.images.original.url);
             gifs_search_response.push(card);

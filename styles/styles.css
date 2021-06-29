@@ -969,8 +969,6 @@ body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
 }
 
 .card.-md {
-  width: 155px;
-  height: 120px;
   margin: 3%;
   overflow: hidden;
 }
