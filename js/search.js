@@ -1,4 +1,5 @@
 const search_endpoint = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&limit=12`;
+const autocomplete_endpoint = `https://api.giphy.com/v1/gifs/search/tags?api_key=${API_KEY}`;
 var gifs_search_response = new Array();
 
 var input = document.getElementById("search");
@@ -8,6 +9,7 @@ var icon_search = search_component.children[1].children[0];
 var results_container = document.getElementById('results');
 var search_container = document.getElementById('search-tmp');
 let btn = document.createElement('a');
+let suggestions_list = document.getElementById('suggestions');
 btn_text = document.createElement('span');
 btn_text.innerHTML = "ver más";
 btn.appendChild(btn_text);
@@ -17,16 +19,20 @@ search_container.append(btn);
 
 input.addEventListener('keyup', function(e){
     e.preventDefault();
-    icon_search.classList.remove('fa-search');
-    icon_search.classList.add('fa-times');
-    search_component.classList.add('active');
     let value = input.value;
     value = value.trim();
+    if(value != ""){
+        icon_search.classList.remove('fa-search');
+        icon_search.classList.add('fa-times');
+        search_component.classList.add('active');
+        suggestions_list.textContent = "";
+        autocomplete(value);
+    }
     if(e.keyCode === 13 && value != undefined){
         icon_search.classList.remove('fa-times');
         icon_search.classList.add('fa-search');
         search_component.classList.remove('active');
-        window.onliad = search(value);
+        window.onload = search(value);
     }
 });
 
@@ -62,4 +68,32 @@ function search(query){
     .catch(e => {
         console.log('failed to get search response' + e);
     });
+}
+
+function autocomplete(char){
+    let url = autocomplete_endpoint + "&q=" + char;
+    fetch(url)
+    .then(response => response.json())
+    .then(response => {
+        for(const item of response.data){
+            renderItem(item);
+        }
+    })
+    .catch(e => {
+        console.log('failed to get autocomplete response' + e);
+    });
+}
+
+function renderItem(item){
+    let li = document.createElement('li');
+    let icon = document.createElement('i');
+    let text = document.createElement('p');
+
+    icon.classList.add('fa');
+    icon.classList.add('fa-search');
+    text.innerHTML = "";
+    text.innerHTML = item.name;
+    li.append(icon);
+    li.append(text);
+    suggestions_list.append(li);
 }
