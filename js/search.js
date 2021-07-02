@@ -1,7 +1,6 @@
 const search_endpoint = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&limit=12`;
 const autocomplete_endpoint = `https://api.giphy.com/v1/gifs/search/tags?api_key=${API_KEY}`;
 var gifs_search_response = new Array();
-
 var input = document.getElementById("search");
 var search_component = document.getElementsByClassName('search-component')[0]; 
 var categories = document.getElementsByClassName('categories')[0];
@@ -42,9 +41,9 @@ input.addEventListener('click', function(e){
 
 input.addEventListener('focusout', function(e){
     e.preventDefault();
-    search_component.classList.remove('active');
+    /*search_component.classList.remove('active');
     icon_search.classList.remove('fa-times');
-    icon_search.classList.add('fa-search');
+    icon_search.classList.add('fa-search');*/
 })
 
 function search(query){
@@ -78,6 +77,15 @@ function autocomplete(char){
         for(const item of response.data){
             renderItem(item);
         }
+        let items = document.getElementById('suggestions').getElementsByClassName('item');
+        for (let index = 0; index < items.length; index++) {
+            const element = items[index];
+            element.addEventListener('click', () => {
+                input.value = element.getElementsByTagName('p')[0].innerHTML;
+                window.onload = search(input.value);
+                clearAutocompleteComponent();
+            })
+        }
     })
     .catch(e => {
         console.log('failed to get autocomplete response' + e);
@@ -89,6 +97,8 @@ function renderItem(item){
     let icon = document.createElement('i');
     let text = document.createElement('p');
 
+    li.style.cursor = "pointer";
+    li.classList.add('item');
     icon.classList.add('fa');
     icon.classList.add('fa-search');
     text.innerHTML = "";
@@ -96,4 +106,10 @@ function renderItem(item){
     li.append(icon);
     li.append(text);
     suggestions_list.append(li);
+}
+function clearAutocompleteComponent(){
+    search_component.classList.remove('active');
+    icon_search.classList.remove('fa-times');
+    icon_search.classList.add('fa-search');
+    input.value = "";
 }
