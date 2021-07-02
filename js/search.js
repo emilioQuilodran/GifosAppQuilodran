@@ -41,9 +41,6 @@ input.addEventListener('click', function(e){
 
 input.addEventListener('focusout', function(e){
     e.preventDefault();
-    /*search_component.classList.remove('active');
-    icon_search.classList.remove('fa-times');
-    icon_search.classList.add('fa-search');*/
 })
 
 function search(query){
@@ -55,6 +52,10 @@ function search(query){
         title.innerHTML = query;
         results_container.innerHTML = "";
         btn.style.display = "inline-block";
+        console.log(title.innerHTML)
+        btn.addEventListener("click", function(){
+            viewMore(title.innerHTML);
+        })
         categories.remove();
 
         for(const item of response.data){
@@ -112,4 +113,25 @@ function clearAutocompleteComponent(){
     icon_search.classList.remove('fa-times');
     icon_search.classList.add('fa-search');
     input.value = "";
+}
+
+function viewMore(text){
+    let offset_query = gifs_search_response.length;
+    let url = search_endpoint + "&q=" + text + "&offset=" + offset_query;
+    console.log(url);
+    fetch(url)
+    .then(response => response.json())
+    .then(response => {
+        console.log(response.data);
+        for(const item of response.data){
+            card = new GifCard(item.id, item.username, item.title, item.images.original.url);
+            gifs_search_response.push(card);
+            let template = create_card(card, "-md");
+            results_container.appendChild(template);
+        }
+    })
+    .catch(e => {
+        console.log('failed to execute view more items' + e);
+    });
+
 }
