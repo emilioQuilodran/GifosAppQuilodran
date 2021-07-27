@@ -135,3 +135,20 @@ function viewMore(text){
     });
 
 }
+
+function renderCards(arr, size,dist){
+    dist.innerHTML = "";
+    arr.forEach(element => {
+        element = create_card(element, size);
+        dist.appendChild(element);
+    });
+}
+
+function updateCard(gif){
+    let obj = gifs_search_response.find(el => el.id == gif.id);
+    if(obj){
+        obj.isFavorite = gif.isFavorite;
+    }
+    renderCards(gifs_search_response, "-md" ,results_container)
+    renderCards(gifs_array, "-lg" ,trend_container)
+}

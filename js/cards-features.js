@@ -16,7 +16,6 @@ function my_fetch(url_trending){
     .then( response => response.json() )
     .then( response => {
         for(const item of response.data){
-            // fix username: when content is blank
             card = new GifCard(item.id, item.username, item.title, item.images.original.url);
             gifs_array.push(card);
             let template = create_card(card, "-lg");
@@ -114,20 +113,10 @@ function create_card_info(item){
     overlay.appendChild(info);
     
     max.addEventListener("click", function(){
-        show_modal_gallery(item);
+        create_modal(item);
     })
     return overlay;
 }
-
-for (const item of btn_like_collection) {
-    // TODO: save info in favs
-    let item_info = item.parentNode.parentNode.parentNode;
-    item.addEventListener("click", function(){
-        console.log("like feaure");
-        has_liked = !has_liked;
-        has_liked ? item.classList.add("active") : item.classList.remove("active");
-    })
-};
 
 for(const item of btn_download_collection){
     item.addEventListener("click", function() {
