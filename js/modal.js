@@ -76,7 +76,16 @@ function create_actions_modals(item){
         item.isFavorite = !item.isFavorite;
         if(item.isFavorite){
             fav_icon.classList.add("active");
+            if(!favs_gifs.includes(item)){
+                favs_gifs.push(item);
+                localStorage.setItem("favoritos", JSON.stringify(favs_gifs))
+            }
+            
         } else {
+            if(favs_gifs.includes(item)){
+                favs_gifs = arrayRemove(favs_gifs, item)
+                localStorage.setItem("favoritos", JSON.stringify(favs_gifs))
+            }
             fav_icon.classList.remove("active");
         }
         updateCard(item);   
@@ -86,4 +95,10 @@ function create_actions_modals(item){
         console.log("download");
     });
     return actions;
+}
+
+function arrayRemove(arr, value){
+    return arr.filter(function(ele){ 
+        return ele != value; 
+    });
 }
