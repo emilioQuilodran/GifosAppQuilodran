@@ -102,3 +102,24 @@ function arrayRemove(arr, value){
         return ele != value; 
     });
 }
+
+function renderCards(arr, size,dist){
+    dist.innerHTML = "";
+    arr.forEach(element => {
+        element = create_card(element, size);
+        dist.appendChild(element);
+    });
+}
+
+function updateCard(gif){
+    let gifs_search_response = new Array();
+    let results_container = document.getElementById('results');
+    if(gifs_search_response){
+        let obj = gifs_search_response.find(el => el.id == gif.id);
+        if(obj){
+            obj.isFavorite = gif.isFavorite;
+        }
+        renderCards(gifs_search_response, "-md" ,results_container)
+    }
+    renderCards(gifs_array, "-lg" ,trend_container)
+}
