@@ -48,6 +48,7 @@ function search(query){
     fetch(url)
     .then(response => response.json())
     .then(response => {
+        console.log(response.data)
         let title = search_component.nextElementSibling;
         title.innerHTML = query;
         results_container.innerHTML = "";

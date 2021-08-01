@@ -6,7 +6,6 @@ let trend_container = document.getElementById("gifs-wrapper");
 let modal_gallery_template = document.getElementById("modal-galery");
 let btn_show_modal = document.getElementsByClassName('max');
 let btn_like_collection = document.getElementById('modal-galery').getElementsByClassName('like');
-let btn_download_collection = document.getElementById('modal-galery').getElementsByClassName('download');
 var has_liked;
 var card;
 
@@ -116,11 +115,4 @@ function create_card_info(item){
         create_modal(item);
     })
     return overlay;
-}
-
-for(const item of btn_download_collection){
-    item.addEventListener("click", function() {
-        let item_info = item.parentNode.parentNode.parentNode;
-        console.log("download gif" , item_info);
-    });
 }

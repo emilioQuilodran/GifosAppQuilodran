@@ -92,7 +92,12 @@ function create_actions_modals(item){
     });
 
     download_icon.addEventListener("click", function(){
-        console.log("download");
+        console.log("downloading gif");
+        var x=new XMLHttpRequest();
+        x.open("GET", item.source_image, true);
+        x.responseType = 'blob';
+        x.onload=function(e){download(x.response, "descarga.gif", "image/gif" ); }
+        x.send();
     });
     return actions;
 }
