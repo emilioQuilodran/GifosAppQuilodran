@@ -119,12 +119,13 @@ function renderCards(arr, size,dist){
 function updateCard(gif){
     let gifs_search_response = new Array();
     let results_container = document.getElementById('results');
+    console.log(gifs_search_response);
     if(gifs_search_response){
         let obj = gifs_search_response.find(el => el.id == gif.id);
         if(obj){
             obj.isFavorite = gif.isFavorite;
         }
-        renderCards(gifs_search_response, "-md" ,results_container)
+        //renderCards(gifs_search_response, "-md" ,results_container)
     }
     renderCards(gifs_array, "-lg" ,trend_container)
 }

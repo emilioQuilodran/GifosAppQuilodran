@@ -605,7 +605,6 @@ footer ul li {
   }
   .search #results {
     margin: 2% auto;
-    width: 1280px;
   }
   .search .search-component {
     width: 650px;
@@ -668,18 +667,18 @@ footer ul li {
   border: solid 1px gray;
 }
 
-.my-gifs .results .title {
+.my-gifs .results .title, .favs .results .title, .search .results .title {
   color: var(--color-secondary);
   font-size: 1.5rem;
   font-weight: 600;
   margin-top: 10%;
 }
 
-.my-gifs .results.no-content {
+.my-gifs .results.no-content, .favs .results.no-content, .search .results.no-content {
   display: block;
 }
 
-.my-gifs .results.no-content p {
+.my-gifs .results.no-content p, .favs .results.no-content p, .search .results.no-content p {
   margin-top: 2%;
 }
 

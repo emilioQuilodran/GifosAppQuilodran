@@ -24,3 +24,15 @@ function handleScroll(){
         body.classList.remove("modal-open"); 
     }
 }
+
+function create_no_content_template(src_img, content){
+    let wrapper = document.createElement("div");
+    let text = document.createElement("p");
+    let image = document.createElement("img");
+    text.classList.add('title');
+    text.innerHTML = content;
+    image.setAttribute("src", src_img);
+    wrapper.appendChild(image);
+    wrapper.appendChild(text);
+    return wrapper;
+}

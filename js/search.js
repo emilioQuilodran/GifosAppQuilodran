@@ -14,7 +14,6 @@ btn_text.innerHTML = "ver más";
 btn.appendChild(btn_text);
 btn.classList.add('btn');
 btn.style.display = "none";
-search_container.append(btn);
 
 input.addEventListener('keyup', function(e){
     e.preventDefault();
@@ -48,22 +47,25 @@ function search(query){
     fetch(url)
     .then(response => response.json())
     .then(response => {
-        console.log(response.data)
         let title = search_component.nextElementSibling;
         title.innerHTML = query;
         results_container.innerHTML = "";
         btn.style.display = "inline-block";
-        console.log(title.innerHTML)
         btn.addEventListener("click", function(){
             viewMore(title.innerHTML);
         })
         categories.remove();
 
-        for(const item of response.data){
-            card = new GifCard(item.id, item.username, item.title, item.images.original.url);
-            gifs_search_response.push(card);
-            let template = create_card(card, "-md");
-            results_container.appendChild(template);
+        if(response.data.length <= 0){
+            results_container.appendChild(create_no_content_template('./images/icon-busqueda-sin-resultado.svg', "Intenta con otra búsqueda."));
+        } else {
+            search_container.append(btn);
+            for(const item of response.data){
+                card = new GifCard(item.id, item.username, item.title, item.images.original.url);
+                gifs_search_response.push(card);
+                let template = create_card(card, "-md");
+                results_container.appendChild(template);
+            }
         }
     })
     .catch(e => {
