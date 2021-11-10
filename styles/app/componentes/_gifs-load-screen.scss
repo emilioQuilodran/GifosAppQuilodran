@@ -1,6 +1,43 @@
 @import '../utils/variables';
 
 .create-gifo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    .camera-container {
+        position: absolute;
+        top: 30%;
+        left: 7%;
+        #camera {
+            position:relative;
+            display: inline-block;
+            width: 125px;
+            height: 165px;
+            z-index: 2;
+        }
+        #bright {
+            position: relative;
+            display: inline-block;
+            width:76px;
+            height:128px;
+            margin-bottom: 18px;
+            margin-left: -6px;
+            z-index: 1;
+        }
+    }
+
+    .film {
+        display: inline-block;
+        width: 145px;
+        height: 90px;
+        position: absolute;
+        bottom: 20%;
+        right:10%;
+    }
+    
     .title  {
         margin-bottom: 10%;
         span {
@@ -15,6 +52,18 @@
         border: solid 1px var(--color-primary);
     }
 
+}
+
+.wrapper-tabs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    .timekeeper {
+        align-self: center;
+        position: relative;
+        left: 18%;
+    }
 }
 
 @media screen and (min-width: 901px) { 

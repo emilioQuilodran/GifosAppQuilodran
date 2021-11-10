@@ -35,7 +35,12 @@
     </header>
     <main>
         <section class="create-gifo">
+            <div class="camera-container">
+                <span id="camera" class="img_camera"></span>
+                <span id="bright" class="img_bright"></span>
+            </div>
             <div class="screen">
+                <video class="video" id="video" autoplay></video>
                 <h4 class="title">
                     Aquí podrás <br> crear tus propios <span>GIFOS</span>
                 </h4>
@@ -44,14 +49,24 @@
                 </p>
                 <p>(sólo necesitas una cámara para grabar un video)</p>
             </div>
+            <span id="film" class="film"></span>
         </section>
-        <ul class="pagination">
-            <li class="item"><a class="btn circle active" href="#"><span>1</span></a></li>
-            <li class="item"><a class="btn circle" href="#"><span>2</span></a></li>
-            <li class="item"><a class="btn circle" href="#"><span>3</span></a></li>
-        </ul>
+        <div class="wrapper-tabs">
+            <ul class="pagination">
+                <li class="item"><a id="step1" class="btn circle" href="#"><span>1</span></a></li>
+                <li class="item"><a id="step2" class="btn circle" href="#"><span>2</span></a></li>
+                <li class="item"><a id="step3" class="btn circle" href="#"><span>3</span></a></li>
+            </ul>
+            <div id="timekeeper" class="timekeeper">
+                <p>00:00:00</p>
+            </div>
+        </div>
         <div class="line"></div>
-        <a class="btn"><span>Comenzar</span></a>
+        <a id="startRecord" class="btn"><span>Comenzar</span></a>
+        <a id="record" class="btn"><span>Grabar</span></a>
+        <a id="endRecord" class="btn"><span>Finalizar</span></a>
+        <a id="uploadRecord" class="btn"><span>Subir GIFO</span></a>
+
     </main>
     <footer>
         <p class="mg-bt-md">Compartir en:</p>
@@ -98,5 +113,6 @@
     </section>
     <script src="./js/main.js"></script>
     <script src="./js/theme_on_off.js"></script>
+    <script src="./js/create-gif.js"></script>
 </body>
 </html>

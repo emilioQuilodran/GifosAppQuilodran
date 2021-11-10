@@ -59,6 +59,33 @@ body {
             }
         }
     }
+
+    #camera {
+        background-image: url("../images/ilustrations/light/camara.svg");
+        background-repeat: no-repeat;
+    }
+    #bright {
+        background-image: url("../images/ilustrations/light/element-luz-camara.svg");
+        background-repeat: no-repeat;
+    }   
+    #film {
+        background-image: url("../images/ilustrations/light/pelicula.svg");
+        background-repeat: no-repeat;
+    }
+    &.dark-mode {
+        #camera {
+            background-image: url("../images/ilustrations/dark/camara-modo-noc.svg");
+            background-repeat: no-repeat;
+        }   
+        #film {
+            background-image: url("../images/ilustrations/dark/pelicula-modo-noc.svg");
+            background-repeat: no-repeat;
+        }
+        #bright {
+            background-image: url("../images/ilustrations/dark/bright.svg");
+            background-repeat: no-repeat;
+        }
+    }
 }
 h1 { font-size: 2.6rem; }
 h2 { font-size: 2.2rem; }
@@ -128,6 +155,8 @@ p {
         }
     }
 }
+
+
 @import 'app/utils/buttons';
 @import 'app/header-footer/header-footer';
 @import 'app/home/home';

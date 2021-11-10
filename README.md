@@ -4,3 +4,6 @@ El desafío consiste en la creación de una aplicación web interactiva para com
 
 # Objetivo
 Catálogo de GIFs que contará con funcionalidad de búsqueda, interacción con una API externa y captura de video
+
+# Link de la web
+https://gifos-app-quilodran.netlify.app/index.html

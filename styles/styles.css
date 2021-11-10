@@ -1,65 +1,67 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;900&display=swap");
+/* line 1, app/utils/_variables.scss */
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  --color-primary:#572EE5;
+  --color-primary: #572EE5;
   --color-third: black;
   --color-secondary: #5ED7C6;
   --bgk-primary: #FFFFFF;
   --bgk-secondary: #F3F5F8;
-  --bkg-modal: rgba(87,46,229,0.9);
-  --bkg-card-hover: rgba(87,46,229,0.8);
+  --bkg-modal: rgba(87, 46, 229, 0.9);
+  --bkg-card-hover: rgba(87, 46, 229, 0.8);
   --bkg-modal-secondary: #FFFFFF;
   --color-text-modal: #FFFFFF;
 }
-
+/* line 13, app/utils/_variables.scss */
 body.dark-mode {
   --color-primary: white;
   --color-secondary: #5ED7C6;
   --bgk-primary: #37383C;
   --bgk-secondary: #222326;
-  --bkg-modal: rgba(0,0,0,0.95);
-  --bkg-modal-secondary: rgba(0,0,0,0.95);
+  --bkg-modal: rgba(0, 0, 0, 0.95);
+  --bkg-modal-secondary: rgba(0, 0, 0, 0.95);
   --color-text-modal: #FFFFFF;
   --color-third: #fff;
 }
-
+/* line 22, app/utils/_variables.scss */
 body.dark-mode p, body.dark-mode i {
   color: var(--color-primary);
 }
-
+/* line 25, app/utils/_variables.scss */
 body.dark-mode .logo {
   border: solid 4px var(--color-secondary);
 }
-
+/* line 28, app/utils/_variables.scss */
 body.dark-mode .logo p {
   background: var(--bgk-primary);
 }
-
+/* line 31, app/utils/_variables.scss */
 body.dark-mode header {
   border-top: solid 5px var(--bgk-secondary);
 }
-
+/* line 34, app/utils/_variables.scss */
 body.dark-mode footer {
   border-bottom: solid 5px var(--bgk-secondary);
 }
-
+/* line 38, app/utils/_variables.scss */
 body.dark-mode .arrow:hover i, body.dark-mode .arrow:hover span, body.dark-mode .btn:hover i, body.dark-mode .btn:hover span {
   color: var(--bgk-primary);
 }
-
+/* line 45, app/utils/_variables.scss */
 body.dark-mode .btn.circle:hover span, body.dark-mode .btn.add:hover span {
   color: var(--color-primary);
 }
-
+/* line 50, app/utils/_variables.scss */
 body.dark-mode .btn.active, body.dark-mode .btn.active:hover {
   background-color: var(--color-primary);
 }
-
+/* line 52, app/utils/_variables.scss */
 body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
   color: var(--bgk-primary);
 }
 
+/* line 1, app/utils/_icons-card.scss */
 .icon {
   display: inline-block;
   margin-left: 10px;
@@ -69,141 +71,186 @@ body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
   border-radius: 10px;
   cursor: pointer;
 }
-
+/* line 9, app/utils/_icons-card.scss */
 .icon.like {
   background-image: url("../images/icons-card/icon-fav.svg");
 }
-
+/* line 11, app/utils/_icons-card.scss */
 .icon.like:hover {
   background-image: url("../images/icons-card/icon-fav-hover.svg");
 }
-
+/* line 14, app/utils/_icons-card.scss */
 .icon.like.active {
   background-image: url("../images/icons-card/icon-fav-active.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: white;
 }
-
+/* line 21, app/utils/_icons-card.scss */
 .icon.download {
   background-image: url("../images/icons-card/icon-download.svg");
 }
-
+/* line 23, app/utils/_icons-card.scss */
 .icon.download:hover {
   background-image: url("../images/icons-card/icon-download-hover.svg");
 }
-
+/* line 27, app/utils/_icons-card.scss */
 .icon.max {
   background-image: url("../images/icons-card/icon-max-normal.svg");
 }
-
+/* line 29, app/utils/_icons-card.scss */
 .icon.max:hover {
   background-image: url("../images/icons-card/icon-max-hover.svg");
 }
 
+/* line 5, styles.scss */
 html {
   scroll-behavior: smooth;
 }
 
+/* line 7, styles.scss */
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* line 12, styles.scss */
 *:focus {
   outline: none;
 }
 
+/* line 15, styles.scss */
 .title {
   font-family: 'Montserrat', sans-serif;
   color: var(--color-primary);
 }
 
+/* line 19, styles.scss */
 .link {
   font-family: 'Montserrat', sans-serif;
   color: var(--color-primary);
   font-weight: 600;
   cursor: pointer;
 }
-
+/* line 24, styles.scss */
 .link.active {
   color: #9CAFC3;
 }
-
+/* line 26, styles.scss */
 .link.active:hover {
   text-decoration: none;
 }
-
+/* line 30, styles.scss */
 .link:hover {
   text-decoration: underline;
-  -webkit-text-decoration-color: var(--color-secondary);
-          text-decoration-color: var(--color-secondary);
+  text-decoration-color: var(--color-secondary);
 }
 
+/* line 35, styles.scss */
 body {
   background-color: var(--bgk-primary);
 }
-
+/* line 37, styles.scss */
 body main {
   text-align: center;
 }
-
+/* line 40, styles.scss */
 body.modal-open {
   overflow: hidden;
 }
-
+/* line 48, styles.scss */
 body #gifs-wrapper .card .icon.like:hover, body .results .card .icon.like:hover {
   background-image: url("../images/icons-card/icon-fav.svg");
   cursor: default;
 }
-
+/* line 54, styles.scss */
 body #gifs-wrapper .card .icon.download:hover, body .results .card .icon.download:hover {
   background-image: url("../images/icons-card/icon-download.svg");
   cursor: default;
 }
+/* line 63, styles.scss */
+body #camera {
+  background-image: url("../images/ilustrations/light/camara.svg");
+  background-repeat: no-repeat;
+}
+/* line 67, styles.scss */
+body #bright {
+  background-image: url("../images/ilustrations/light/element-luz-camara.svg");
+  background-repeat: no-repeat;
+}
+/* line 71, styles.scss */
+body #film {
+  background-image: url("../images/ilustrations/light/pelicula.svg");
+  background-repeat: no-repeat;
+}
+/* line 76, styles.scss */
+body.dark-mode #camera {
+  background-image: url("../images/ilustrations/dark/camara-modo-noc.svg");
+  background-repeat: no-repeat;
+}
+/* line 80, styles.scss */
+body.dark-mode #film {
+  background-image: url("../images/ilustrations/dark/pelicula-modo-noc.svg");
+  background-repeat: no-repeat;
+}
+/* line 84, styles.scss */
+body.dark-mode #bright {
+  background-image: url("../images/ilustrations/dark/bright.svg");
+  background-repeat: no-repeat;
+}
 
+/* line 90, styles.scss */
 h1 {
   font-size: 2.6rem;
 }
 
+/* line 91, styles.scss */
 h2 {
   font-size: 2.2rem;
 }
 
+/* line 92, styles.scss */
 h3 {
   font-size: 2.0rem;
 }
 
+/* line 93, styles.scss */
 h4 {
   font-size: 1.8rem;
 }
 
+/* line 94, styles.scss */
 h5 {
   font-size: 1.6rem;
 }
 
+/* line 95, styles.scss */
 h6 {
   font-size: 1.4rem;
 }
 
+/* line 96, styles.scss */
 a {
   text-decoration: none;
 }
 
+/* line 97, styles.scss */
 p {
   line-height: 1.5;
 }
 
+/* line 100, styles.scss */
 .mg-bt-md {
   margin-bottom: 15px;
 }
 
+/* line 103, styles.scss */
 .mg-bt-sm {
   margin-bottom: 10px;
 }
 
+/* line 106, styles.scss */
 .logo {
   width: 48px;
   height: 48px;
@@ -211,7 +258,7 @@ p {
   position: relative;
   cursor: pointer;
 }
-
+/* line 112, styles.scss */
 .logo::before {
   content: '';
   position: absolute;
@@ -221,11 +268,11 @@ p {
   top: -4px;
   right: -5px;
 }
-
+/* line 122, styles.scss */
 .logo a:active {
   color: var(--color-primary);
 }
-
+/* line 126, styles.scss */
 .logo p {
   margin-left: 7px;
   background: var(--bgk-primary);
@@ -237,6 +284,7 @@ p {
   color: var(--color-primary);
 }
 
+/* line 137, styles.scss */
 .line {
   width: 90%;
   height: 7px;
@@ -245,28 +293,26 @@ p {
   border-radius: 8px;
 }
 
+/* line 144, styles.scss */
 .pagination {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   list-style: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
+/* line 148, styles.scss */
 .pagination li {
   margin-left: 15px;
 }
-
+/* line 150, styles.scss */
 .pagination li a {
   cursor: default;
 }
-
+/* line 153, styles.scss */
 .pagination li:first-of-type {
   margin: 0;
 }
 
+/* line 1, app/utils/_buttons.scss */
 .btn {
   display: inline-block;
   background-color: var(--bgk-primary);
@@ -279,48 +325,49 @@ p {
   font-size: 16px;
   cursor: pointer;
 }
-
+/* line 12, app/utils/_buttons.scss */
 .btn.add {
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
-
+/* line 17, app/utils/_buttons.scss */
 .btn.add:hover span, .btn.add:hover .fa {
   color: var(--bgk-primary);
 }
-
+/* line 22, app/utils/_buttons.scss */
 .btn.circle {
   width: 32px;
   height: 32px;
   line-height: 32px;
   border-radius: 50%;
 }
-
+/* line 27, app/utils/_buttons.scss */
 .btn.circle:hover {
   background-color: initial;
 }
-
+/* line 29, app/utils/_buttons.scss */
 .btn.circle:hover span {
   color: var(--color-primary);
 }
-
+/* line 33, app/utils/_buttons.scss */
 .btn.circle.active {
   background-color: var(--color-primary);
 }
-
+/* line 35, app/utils/_buttons.scss */
 .btn.circle.active span {
   color: var(--color-text-modal);
 }
-
+/* line 40, app/utils/_buttons.scss */
 .btn:hover {
   background-color: var(--color-primary);
 }
-
+/* line 43, app/utils/_buttons.scss */
 .btn:hover span, .btn:hover i {
   color: var(--color-text-modal);
 }
 
+/* line 49, app/utils/_buttons.scss */
 .arrow {
   background-color: var(--bgk-primary);
   color: var(--color-primary);
@@ -331,49 +378,47 @@ p {
   cursor: pointer;
   font-size: 30px;
 }
-
+/* line 58, app/utils/_buttons.scss */
 .arrow i.fa {
   line-height: 40px;
   margin: 0 !important;
 }
-
+/* line 62, app/utils/_buttons.scss */
 .arrow:hover {
   background-color: var(--color-primary);
   color: var(--color-text-modal);
 }
 
+/* line 2, app/header-footer/_header-footer.scss */
 html {
   min-height: 100%;
   position: relative;
 }
 
+/* line 6, app/header-footer/_header-footer.scss */
 body {
   margin-bottom: 190px;
 }
 
+/* line 10, app/header-footer/_header-footer.scss */
 header {
   border-top: solid 5px var(--color-primary);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding: 5%;
   color: var(--color-primary);
 }
-
+/* line 17, app/header-footer/_header-footer.scss */
 header i {
   cursor: pointer;
 }
-
+/* line 20, app/header-footer/_header-footer.scss */
 header .desktop-menu {
   display: none;
 }
 
+/* line 24, app/header-footer/_header-footer.scss */
 footer {
   border-bottom: solid 5px var(--color-primary);
   padding: 12% 0 5%;
@@ -383,11 +428,11 @@ footer {
   right: 0;
   left: 0;
 }
-
+/* line 32, app/header-footer/_header-footer.scss */
 footer ul {
   margin: 5% 0;
 }
-
+/* line 34, app/header-footer/_header-footer.scss */
 footer ul li {
   list-style: none;
   display: inline-block;
@@ -395,66 +440,69 @@ footer ul li {
 }
 
 @media screen and (min-width: 901px) {
+  /* line 43, app/header-footer/_header-footer.scss */
   body {
     margin-bottom: 145px;
   }
+
+  /* line 48, app/header-footer/_header-footer.scss */
   header .logo {
     width: 58px;
     height: 58px;
   }
+  /* line 51, app/header-footer/_header-footer.scss */
   header .logo p {
     top: 22px;
   }
+
+  /* line 56, app/header-footer/_header-footer.scss */
   footer {
     padding: 3% 8.5%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    align-items: flex-start;
   }
+  /* line 61, app/header-footer/_header-footer.scss */
   footer p.text {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
     text-align: right;
   }
+  /* line 65, app/header-footer/_header-footer.scss */
   footer p.mg-bt-md {
     margin-bottom: 0;
   }
+  /* line 69, app/header-footer/_header-footer.scss */
   footer ul {
     margin: 0;
   }
 }
-
+/* line 1, app/home/_home.scss */
 .search {
   margin: 10% 5%;
   margin-bottom: 15%;
 }
-
+/* line 4, app/home/_home.scss */
 .search > .title span {
   color: var(--color-secondary);
 }
-
+/* line 8, app/home/_home.scss */
 .search #results h2 {
   margin-bottom: 30px;
 }
-
+/* line 12, app/home/_home.scss */
 .search .search-component {
   position: relative;
   margin: 10% 0;
 }
-
+/* line 15, app/home/_home.scss */
 .search .search-component img {
   width: 85%;
   margin: 0 auto;
 }
-
+/* line 19, app/home/_home.scss */
 .search .search-component .input-content {
   position: relative;
 }
-
+/* line 21, app/home/_home.scss */
 .search .search-component .input-content > .fa-search, .search .search-component .input-content > .fa-times {
   position: absolute;
   bottom: 19px;
@@ -463,7 +511,7 @@ footer ul li {
   font-size: 26px;
   color: var(--color-primary);
 }
-
+/* line 29, app/home/_home.scss */
 .search .search-component .input-content input {
   background-color: var(--bgk-primary);
   width: 100%;
@@ -476,16 +524,16 @@ footer ul li {
   font-size: 16px;
   color: var(--color-third);
 }
-
+/* line 42, app/home/_home.scss */
 .search .search-component .suggestions {
   display: none;
 }
-
+/* line 47, app/home/_home.scss */
 .search .search-component.active input#search {
   border-radius: 25px 25px 0 0;
   border-bottom: transparent;
 }
-
+/* line 51, app/home/_home.scss */
 .search .search-component.active .suggestions {
   display: block;
   list-style: none;
@@ -497,168 +545,151 @@ footer ul li {
   border-top: none;
   z-index: 0;
 }
-
+/* line 61, app/home/_home.scss */
 .search .search-component.active .suggestions li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-start;
+  align-items: center;
   padding: 10px 25px;
 }
-
+/* line 66, app/home/_home.scss */
 .search .search-component.active .suggestions li p {
   padding-left: 15px;
 }
-
+/* line 69, app/home/_home.scss */
 .search .search-component.active .suggestions li:first-of-type {
   border-top: 1px solid var(--color-primary);
 }
-
+/* line 76, app/home/_home.scss */
 .search p {
   font-family: 'Montserrat', sans-serif;
 }
-
+/* line 79, app/home/_home.scss */
 .search .categories {
   margin: 10% 0;
   color: var(--color-primary);
 }
-
+/* line 82, app/home/_home.scss */
 .search .categories .title {
   font-size: 18px;
 }
 
+/* line 88, app/home/_home.scss */
 .trend {
   padding: 0 0 5%;
   background-color: var(--bgk-secondary);
   padding-top: 12%;
 }
-
+/* line 92, app/home/_home.scss */
 .trend .text, .trend .title {
   margin-bottom: 10px;
 }
-
+/* line 95, app/home/_home.scss */
 .trend .gallery {
   padding: 10px 0 0 0;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
   overflow-x: auto;
 }
-
+/* line 100, app/home/_home.scss */
 .trend .gallery #gifs-wrapper {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   overflow: hidden;
 }
-
+/* line 105, app/home/_home.scss */
 .trend .gallery .arrow {
   display: none;
 }
-
+/* line 108, app/home/_home.scss */
 .trend .gallery .card {
   margin: 0 20px;
 }
-
+/* line 112, app/home/_home.scss */
 .trend img {
   width: auto;
   height: 350px;
 }
 
 @media screen and (min-width: 901px) {
+  /* line 119, app/home/_home.scss */
   header {
     padding: 2% 10%;
     margin-bottom: 5%;
   }
+  /* line 122, app/home/_home.scss */
   header #menu-bars {
     display: none;
   }
+  /* line 125, app/home/_home.scss */
   header .desktop-menu {
     list-style: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     text-align: center;
   }
+  /* line 130, app/home/_home.scss */
   header .desktop-menu li {
     margin-left: 30px;
   }
+  /* line 132, app/home/_home.scss */
   header .desktop-menu li a {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     color: var(--color-primary);
     text-transform: uppercase;
   }
+
+  /* line 141, app/home/_home.scss */
   .search {
     margin: 0 auto;
   }
+  /* line 143, app/home/_home.scss */
   .search #results {
     margin: 2% auto;
   }
+  /* line 148, app/home/_home.scss */
   .search .search-component {
     width: 650px;
     margin: 0 auto;
   }
+
+  /* line 153, app/home/_home.scss */
   .trend {
     padding: 5% 0;
   }
+  /* line 155, app/home/_home.scss */
   .trend .gallery {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
     margin: 4% auto 0;
     padding: 0;
     overflow: initial;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
+  /* line 162, app/home/_home.scss */
   .trend .gallery #gifs-wrapper {
     width: 80%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: initial;
-        -ms-flex-pack: initial;
-            justify-content: initial;
+    justify-content: initial;
     overflow-x: auto;
   }
+  /* line 168, app/home/_home.scss */
   .trend .gallery .arrow {
     display: block;
   }
 }
-
+/* line 1, app/favs/_favs.scss */
 .favs, .my-gifs, .search {
   padding-bottom: 5%;
 }
-
+/* line 3, app/favs/_favs.scss */
 .favs .results, .my-gifs .results, .search .results {
   margin: 5% 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-flow: row wrap;
+  justify-content: center;
 }
-
+/* line 8, app/favs/_favs.scss */
 .favs .results .item, .my-gifs .results .item, .search .results .item {
   margin: 4%;
   width: 155px;
@@ -667,92 +698,96 @@ footer ul li {
   border: solid 1px gray;
 }
 
+/* line 20, app/favs/_favs.scss */
 .my-gifs .results .title, .favs .results .title, .search .results .title {
   color: var(--color-secondary);
   font-size: 1.5rem;
   font-weight: 600;
   margin-top: 10%;
 }
-
+/* line 26, app/favs/_favs.scss */
 .my-gifs .results.no-content, .favs .results.no-content, .search .results.no-content {
   display: block;
 }
-
+/* line 28, app/favs/_favs.scss */
 .my-gifs .results.no-content p, .favs .results.no-content p, .search .results.no-content p {
   margin-top: 2%;
 }
 
 @media screen and (min-width: 901px) {
+  /* line 38, app/favs/_favs.scss */
   .favs .card.-md, .my-gifs .card.-md, .search .card.-md {
     margin: 20px;
   }
+  /* line 41, app/favs/_favs.scss */
   .favs .card.-md, .favs .card img, .my-gifs .card.-md, .my-gifs .card img, .search .card.-md, .search .card img {
     width: 260px;
     height: 200px;
   }
 }
-
+/* line 1, app/utils/_variables.scss */
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  --color-primary:#572EE5;
+  --color-primary: #572EE5;
   --color-third: black;
   --color-secondary: #5ED7C6;
   --bgk-primary: #FFFFFF;
   --bgk-secondary: #F3F5F8;
-  --bkg-modal: rgba(87,46,229,0.9);
-  --bkg-card-hover: rgba(87,46,229,0.8);
+  --bkg-modal: rgba(87, 46, 229, 0.9);
+  --bkg-card-hover: rgba(87, 46, 229, 0.8);
   --bkg-modal-secondary: #FFFFFF;
   --color-text-modal: #FFFFFF;
 }
-
+/* line 13, app/utils/_variables.scss */
 body.dark-mode {
   --color-primary: white;
   --color-secondary: #5ED7C6;
   --bgk-primary: #37383C;
   --bgk-secondary: #222326;
-  --bkg-modal: rgba(0,0,0,0.95);
-  --bkg-modal-secondary: rgba(0,0,0,0.95);
+  --bkg-modal: rgba(0, 0, 0, 0.95);
+  --bkg-modal-secondary: rgba(0, 0, 0, 0.95);
   --color-text-modal: #FFFFFF;
   --color-third: #fff;
 }
-
+/* line 22, app/utils/_variables.scss */
 body.dark-mode p, body.dark-mode i {
   color: var(--color-primary);
 }
-
+/* line 25, app/utils/_variables.scss */
 body.dark-mode .logo {
   border: solid 4px var(--color-secondary);
 }
-
+/* line 28, app/utils/_variables.scss */
 body.dark-mode .logo p {
   background: var(--bgk-primary);
 }
-
+/* line 31, app/utils/_variables.scss */
 body.dark-mode header {
   border-top: solid 5px var(--bgk-secondary);
 }
-
+/* line 34, app/utils/_variables.scss */
 body.dark-mode footer {
   border-bottom: solid 5px var(--bgk-secondary);
 }
-
+/* line 38, app/utils/_variables.scss */
 body.dark-mode .arrow:hover i, body.dark-mode .arrow:hover span, body.dark-mode .btn:hover i, body.dark-mode .btn:hover span {
   color: var(--bgk-primary);
 }
-
+/* line 45, app/utils/_variables.scss */
 body.dark-mode .btn.circle:hover span, body.dark-mode .btn.add:hover span {
   color: var(--color-primary);
 }
-
+/* line 50, app/utils/_variables.scss */
 body.dark-mode .btn.active, body.dark-mode .btn.active:hover {
   background-color: var(--color-primary);
 }
-
+/* line 52, app/utils/_variables.scss */
 body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
   color: var(--bgk-primary);
 }
 
+/* line 3, app/componentes/_modal.scss */
 .modal {
   display: none;
   position: fixed;
@@ -763,19 +798,19 @@ body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
   z-index: 10;
   background-color: var(--bkg-modal);
 }
-
+/* line 12, app/componentes/_modal.scss */
 .modal header {
   background-color: var(--bgk-primary);
 }
-
+/* line 16, app/componentes/_modal.scss */
 .modal .modal-content .body {
   text-align: center;
 }
-
+/* line 19, app/componentes/_modal.scss */
 .modal .modal-content .body ul li {
   position: relative;
 }
-
+/* line 21, app/componentes/_modal.scss */
 .modal .modal-content .body ul li::before {
   position: absolute;
   content: '';
@@ -785,71 +820,62 @@ body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
   bottom: 0;
   left: 45%;
 }
-
+/* line 32, app/componentes/_modal.scss */
 .modal .modal-content .body a {
   display: block;
   padding: 8% 0;
   color: var(--color-text-modal);
 }
 
+/* line 41, app/componentes/_modal.scss */
 #modal-galery {
   background-color: var(--bkg-modal-secondary);
 }
-
+/* line 43, app/componentes/_modal.scss */
 #modal-galery .body {
   width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin: 20% auto 0;
 }
-
+/* line 48, app/componentes/_modal.scss */
 #modal-galery .body .arrow {
   display: none;
 }
-
+/* line 51, app/componentes/_modal.scss */
 #modal-galery .body img {
   margin: 20% 0 5%;
 }
-
+/* line 54, app/componentes/_modal.scss */
 #modal-galery .body .fa-times {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
   cursor: pointer;
   color: var(--color-primary);
 }
-
+/* line 59, app/componentes/_modal.scss */
 #modal-galery .body .actions {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
+/* line 63, app/componentes/_modal.scss */
 #modal-galery .body .actions .description {
   text-align: left;
 }
-
+/* line 65, app/componentes/_modal.scss */
 #modal-galery .body .actions .description .title {
   color: var(--color-third);
   font-weight: 600;
 }
 
 @media screen and (min-width: 901px) {
+  /* line 76, app/componentes/_modal.scss */
   #modal-galery .body {
     width: 600px;
     margin: 4% auto;
     position: relative;
   }
+  /* line 80, app/componentes/_modal.scss */
   #modal-galery .body .arrow {
     display: block;
     position: absolute;
@@ -857,97 +883,93 @@ body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
     margin-top: -40px;
     right: 5%;
   }
+  /* line 86, app/componentes/_modal.scss */
   #modal-galery .body .arrow:nth-child(2) {
     left: 5%;
   }
+  /* line 90, app/componentes/_modal.scss */
   #modal-galery .body img {
     margin: 10% auto;
     width: 350px;
   }
 }
-
+/* line 1, app/utils/_variables.scss */
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  --color-primary:#572EE5;
+  --color-primary: #572EE5;
   --color-third: black;
   --color-secondary: #5ED7C6;
   --bgk-primary: #FFFFFF;
   --bgk-secondary: #F3F5F8;
-  --bkg-modal: rgba(87,46,229,0.9);
-  --bkg-card-hover: rgba(87,46,229,0.8);
+  --bkg-modal: rgba(87, 46, 229, 0.9);
+  --bkg-card-hover: rgba(87, 46, 229, 0.8);
   --bkg-modal-secondary: #FFFFFF;
   --color-text-modal: #FFFFFF;
 }
-
+/* line 13, app/utils/_variables.scss */
 body.dark-mode {
   --color-primary: white;
   --color-secondary: #5ED7C6;
   --bgk-primary: #37383C;
   --bgk-secondary: #222326;
-  --bkg-modal: rgba(0,0,0,0.95);
-  --bkg-modal-secondary: rgba(0,0,0,0.95);
+  --bkg-modal: rgba(0, 0, 0, 0.95);
+  --bkg-modal-secondary: rgba(0, 0, 0, 0.95);
   --color-text-modal: #FFFFFF;
   --color-third: #fff;
 }
-
+/* line 22, app/utils/_variables.scss */
 body.dark-mode p, body.dark-mode i {
   color: var(--color-primary);
 }
-
+/* line 25, app/utils/_variables.scss */
 body.dark-mode .logo {
   border: solid 4px var(--color-secondary);
 }
-
+/* line 28, app/utils/_variables.scss */
 body.dark-mode .logo p {
   background: var(--bgk-primary);
 }
-
+/* line 31, app/utils/_variables.scss */
 body.dark-mode header {
   border-top: solid 5px var(--bgk-secondary);
 }
-
+/* line 34, app/utils/_variables.scss */
 body.dark-mode footer {
   border-bottom: solid 5px var(--bgk-secondary);
 }
-
+/* line 38, app/utils/_variables.scss */
 body.dark-mode .arrow:hover i, body.dark-mode .arrow:hover span, body.dark-mode .btn:hover i, body.dark-mode .btn:hover span {
   color: var(--bgk-primary);
 }
-
+/* line 45, app/utils/_variables.scss */
 body.dark-mode .btn.circle:hover span, body.dark-mode .btn.add:hover span {
   color: var(--color-primary);
 }
-
+/* line 50, app/utils/_variables.scss */
 body.dark-mode .btn.active, body.dark-mode .btn.active:hover {
   background-color: var(--color-primary);
 }
-
+/* line 52, app/utils/_variables.scss */
 body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
   color: var(--bgk-primary);
 }
 
+/* line 3, app/componentes/_card.scss */
 .card {
   position: relative;
 }
-
+/* line 6, app/componentes/_card.scss */
 .card:hover .overlay {
   opacity: 1;
   cursor: pointer;
 }
-
+/* line 11, app/componentes/_card.scss */
 .card .overlay {
   opacity: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-flow: column wrap;
+  justify-content: space-between;
   position: absolute;
   background: var(--bkg-card-hover);
   top: 0;
@@ -956,27 +978,26 @@ body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
   bottom: 4px;
   padding: 15px;
 }
-
+/* line 23, app/componentes/_card.scss */
 .card .overlay > div {
   text-align: left;
   color: var(--color-text-modal);
 }
-
+/* line 26, app/componentes/_card.scss */
 .card .overlay > div:first-of-type {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
 }
-
+/* line 31, app/componentes/_card.scss */
 .card.-md {
   margin: 3%;
   overflow: hidden;
 }
-
+/* line 36, app/componentes/_card.scss */
 .card.-md .overlay {
   padding: 7px;
   bottom: 0;
 }
-
+/* line 39, app/componentes/_card.scss */
 .card.-md .overlay .icon {
   width: 30px;
   height: 30px;
@@ -985,75 +1006,119 @@ body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
   background-position: center;
 }
 
+/* line 1, app/utils/_variables.scss */
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  --color-primary:#572EE5;
+  --color-primary: #572EE5;
   --color-third: black;
   --color-secondary: #5ED7C6;
   --bgk-primary: #FFFFFF;
   --bgk-secondary: #F3F5F8;
-  --bkg-modal: rgba(87,46,229,0.9);
-  --bkg-card-hover: rgba(87,46,229,0.8);
+  --bkg-modal: rgba(87, 46, 229, 0.9);
+  --bkg-card-hover: rgba(87, 46, 229, 0.8);
   --bkg-modal-secondary: #FFFFFF;
   --color-text-modal: #FFFFFF;
 }
-
+/* line 13, app/utils/_variables.scss */
 body.dark-mode {
   --color-primary: white;
   --color-secondary: #5ED7C6;
   --bgk-primary: #37383C;
   --bgk-secondary: #222326;
-  --bkg-modal: rgba(0,0,0,0.95);
-  --bkg-modal-secondary: rgba(0,0,0,0.95);
+  --bkg-modal: rgba(0, 0, 0, 0.95);
+  --bkg-modal-secondary: rgba(0, 0, 0, 0.95);
   --color-text-modal: #FFFFFF;
   --color-third: #fff;
 }
-
+/* line 22, app/utils/_variables.scss */
 body.dark-mode p, body.dark-mode i {
   color: var(--color-primary);
 }
-
+/* line 25, app/utils/_variables.scss */
 body.dark-mode .logo {
   border: solid 4px var(--color-secondary);
 }
-
+/* line 28, app/utils/_variables.scss */
 body.dark-mode .logo p {
   background: var(--bgk-primary);
 }
-
+/* line 31, app/utils/_variables.scss */
 body.dark-mode header {
   border-top: solid 5px var(--bgk-secondary);
 }
-
+/* line 34, app/utils/_variables.scss */
 body.dark-mode footer {
   border-bottom: solid 5px var(--bgk-secondary);
 }
-
+/* line 38, app/utils/_variables.scss */
 body.dark-mode .arrow:hover i, body.dark-mode .arrow:hover span, body.dark-mode .btn:hover i, body.dark-mode .btn:hover span {
   color: var(--bgk-primary);
 }
-
+/* line 45, app/utils/_variables.scss */
 body.dark-mode .btn.circle:hover span, body.dark-mode .btn.add:hover span {
   color: var(--color-primary);
 }
-
+/* line 50, app/utils/_variables.scss */
 body.dark-mode .btn.active, body.dark-mode .btn.active:hover {
   background-color: var(--color-primary);
 }
-
+/* line 52, app/utils/_variables.scss */
 body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
   color: var(--bgk-primary);
 }
 
+/* line 3, app/componentes/_gifs-load-screen.scss */
+.create-gifo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+/* line 10, app/componentes/_gifs-load-screen.scss */
+.create-gifo .camera-container {
+  position: absolute;
+  top: 30%;
+  left: 7%;
+}
+/* line 14, app/componentes/_gifs-load-screen.scss */
+.create-gifo .camera-container #camera {
+  position: relative;
+  display: inline-block;
+  width: 125px;
+  height: 165px;
+  z-index: 2;
+}
+/* line 21, app/componentes/_gifs-load-screen.scss */
+.create-gifo .camera-container #bright {
+  position: relative;
+  display: inline-block;
+  width: 76px;
+  height: 128px;
+  margin-bottom: 18px;
+  margin-left: -6px;
+  z-index: 1;
+}
+/* line 32, app/componentes/_gifs-load-screen.scss */
+.create-gifo .film {
+  display: inline-block;
+  width: 145px;
+  height: 90px;
+  position: absolute;
+  bottom: 20%;
+  right: 10%;
+}
+/* line 41, app/componentes/_gifs-load-screen.scss */
 .create-gifo .title {
   margin-bottom: 10%;
 }
-
+/* line 43, app/componentes/_gifs-load-screen.scss */
 .create-gifo .title span {
   color: var(--color-secondary);
 }
-
+/* line 47, app/componentes/_gifs-load-screen.scss */
 .create-gifo .screen {
   min-width: 280px;
   width: 90%;
@@ -1062,29 +1127,40 @@ body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
   border: solid 1px var(--color-primary);
 }
 
+/* line 57, app/componentes/_gifs-load-screen.scss */
+.wrapper-tabs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* line 62, app/componentes/_gifs-load-screen.scss */
+.wrapper-tabs .timekeeper {
+  align-self: center;
+  position: relative;
+  left: 18%;
+}
+
 @media screen and (min-width: 901px) {
+  /* line 71, app/componentes/_gifs-load-screen.scss */
   .create-gifo .screen {
     width: 700px;
     height: 400px;
     padding: 20px;
     margin: 0 auto 30px auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-flow: column;
+    justify-content: center;
   }
+
+  /* line 81, app/componentes/_gifs-load-screen.scss */
   .pagination {
     margin: 30px 0;
   }
+
+  /* line 84, app/componentes/_gifs-load-screen.scss */
   .line {
     width: 50%;
     margin: 20px auto;
   }
 }
-/*# sourceMappingURL=styles.css.map */
