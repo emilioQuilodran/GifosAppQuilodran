@@ -1120,30 +1120,75 @@ body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
 }
 /* line 47, app/componentes/_gifs-load-screen.scss */
 .create-gifo .screen {
+  position: relative;
   min-width: 280px;
   width: 90%;
   margin: 10% auto;
   padding: 10%;
   border: solid 1px var(--color-primary);
+  z-index: 2;
+  background-color: var(--bgk-primary);
+}
+/* line 56, app/componentes/_gifs-load-screen.scss */
+.create-gifo .screen .video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
-/* line 57, app/componentes/_gifs-load-screen.scss */
+/* line 67, app/componentes/_gifs-load-screen.scss */
 .wrapper-tabs {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
-/* line 62, app/componentes/_gifs-load-screen.scss */
+/* line 72, app/componentes/_gifs-load-screen.scss */
 .wrapper-tabs .timekeeper {
   align-self: center;
   position: relative;
   left: 18%;
 }
 
+/* line 80, app/componentes/_gifs-load-screen.scss */
+.create-gifo-wrapper #record, .create-gifo-wrapper #endRecord, .create-gifo-wrapper #uploadRecord, .create-gifo-wrapper #timekeeper {
+  display: none;
+}
+/* line 84, app/componentes/_gifs-load-screen.scss */
+.create-gifo-wrapper.started #startRecord {
+  display: none;
+}
+/* line 89, app/componentes/_gifs-load-screen.scss */
+.create-gifo-wrapper.recording #startRecord {
+  display: none;
+}
+/* line 92, app/componentes/_gifs-load-screen.scss */
+.create-gifo-wrapper.recording #record {
+  display: inline-block;
+}
+/* line 97, app/componentes/_gifs-load-screen.scss */
+.create-gifo-wrapper.end-record #record, .create-gifo-wrapper.end-record #startRecord {
+  display: none;
+}
+/* line 100, app/componentes/_gifs-load-screen.scss */
+.create-gifo-wrapper.end-record #endRecord, .create-gifo-wrapper.end-record #timekeeper {
+  display: inline-block;
+}
+/* line 105, app/componentes/_gifs-load-screen.scss */
+.create-gifo-wrapper.upload #record, .create-gifo-wrapper.upload #startRecord {
+  display: none;
+}
+/* line 108, app/componentes/_gifs-load-screen.scss */
+.create-gifo-wrapper.upload #uploadRecord, .create-gifo-wrapper.upload #timekeeper {
+  display: inline-block;
+}
+
 @media screen and (min-width: 901px) {
-  /* line 71, app/componentes/_gifs-load-screen.scss */
+  /* line 116, app/componentes/_gifs-load-screen.scss */
   .create-gifo .screen {
+    position: relative;
     width: 700px;
     height: 400px;
     padding: 20px;
@@ -1153,12 +1198,12 @@ body.dark-mode .btn.active span, body.dark-mode .btn.active:hover span {
     justify-content: center;
   }
 
-  /* line 81, app/componentes/_gifs-load-screen.scss */
+  /* line 127, app/componentes/_gifs-load-screen.scss */
   .pagination {
     margin: 30px 0;
   }
 
-  /* line 84, app/componentes/_gifs-load-screen.scss */
+  /* line 130, app/componentes/_gifs-load-screen.scss */
   .line {
     width: 50%;
     margin: 20px auto;
