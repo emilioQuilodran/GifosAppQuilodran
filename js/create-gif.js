@@ -21,7 +21,6 @@ var contSegundos2 = 0;
 
 startBtnRecord.addEventListener('click', function(){
     console.log('ready to start');
-    _handleScreenInfo();
     _getMedia();
 
 })
@@ -70,8 +69,19 @@ function _handleScreenInfo(){
     title[0].innerText = "Nos das acceso a tu camara?"
     text[0].innerHTML = "El acceso a tu camara será válido sólo <br>por el tiempo en el que estés creando el GIFO."
 }
+function _handleScreenInfoError(err){
+    let title = document.getElementById('screen')
+                .getElementsByClassName('title');
+    let text = document.getElementById('screen')
+                .getElementsByTagName('p');
+    title[0].innerText = "Parece que no nos diste permiso a la camara?"
+    text[0].innerHTML = "Para grabar debes darle a aceptar <br> El acceso a tu camara será válido sólo <br>por el tiempo en el que estés creando el GIFO."
+    mainWrapper.classList.remove('started');
+}
 
 async function _getMedia(){
+    _handleScreenInfo();
+
     var constraints = {
         audio: false, 
         video: {
@@ -91,7 +101,10 @@ async function _getMedia(){
         video.play();
         stream = mediaStream;
     })
-    .catch(function(err) { console.log(err.name + ": " + err.message); });
+    .catch(function(err) { 
+        console.log(err.name + ": " + err.message); 
+        _handleScreenInfoError();
+    });
 }
 
 function _handleTimer(){
