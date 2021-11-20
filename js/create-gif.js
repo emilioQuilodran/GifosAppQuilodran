@@ -1,4 +1,4 @@
-const upload_endpoint = `https://api.giphy.com/v1/gifs?api_key=${API_KEY}`
+const upload_endpoint = `https://upload.giphy.com/v1/gifs?api_key=${API_KEY}`
 var mainWrapper = document.getElementById('create-gifo-wrapper');
 var step1Btn = document.getElementById('step1');
 var step2Btn = document.getElementById('step2');
@@ -48,7 +48,6 @@ endBtnRecord.addEventListener('click', function(){
     console.log('ending record');
     recorder.stopRecording();
     blob = recorder.getBlob();
-    console.log('blob'. blob);
     _stopTimer();
     mainWrapper.classList.remove('end-record');
     mainWrapper.classList.add('upload');
@@ -57,6 +56,7 @@ endBtnRecord.addEventListener('click', function(){
 
 uploadBtnRecord.addEventListener('click', function(){
     console.log("uploading gifo");
+    upload();
 })
 
 function _handleScreenInfo(){
@@ -106,7 +106,6 @@ async function _getMedia(){
         _handleScreenInfoError();
     });
 }
-
 function _handleTimer(){
     console.log('timer initialized');
     timer = setInterval(function () {
@@ -136,4 +135,21 @@ function _stopTimer(){
     contMinutos2 = 0;
     contSegundos1 = 0;
     contSegundos2 = 0;
+}
+function upload(){
+    let form = new FormData();
+    form.append('file', blob, 'myGif.gif');
+    console.log(form.get('file'))
+    fetch(
+        upload_endpoint,
+        {
+            method: "POST",
+            body: form,
+        }
+    )
+    .then(response => response.json())
+    .then(data => {
+        console.log('response data', data);
+    }
+    .catch(console.error));
 }
