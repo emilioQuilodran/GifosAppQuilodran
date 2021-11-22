@@ -109,6 +109,28 @@
             display: inline-block;
         }
     }
+    &.uploading {
+        #record, #startRecord, #uploadRecord, #timekeeper {
+            display: none;
+        }
+        .screen {
+            .created-overlay-gif {
+                display: block;
+            }    
+        }
+    }
+    .screen {
+        .created-overlay-gif {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(87,46,229,.6);
+            padding-top: 23%;
+            display: none;
+        }
+    }
 }
 
 @media screen and (min-width: 901px) { 

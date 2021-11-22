@@ -19,6 +19,26 @@ var contSegundos2 = 0;
 // to manipulate the stages to create and upload the gifo
 // we can help us sticking this css clases into the main: started | recording | end-record | upload
 
+class Gifo{
+    constructor(id, name, user){
+        this.favorite = false;
+        this.id = id;
+        this.name = name;
+        this.url = "https://media.giphy.com/media/"+id+"/giphy.gif";
+        this.user = user;
+    }
+
+    getUrl(){
+        return this.url;
+    }
+    getName(){
+        return this.name;
+    }
+    getUser(){
+        return this.user;
+    }
+}
+
 startBtnRecord.addEventListener('click', function(){
     console.log('ready to start');
     _getMedia();
@@ -29,7 +49,6 @@ recordBtn.addEventListener('click', function(){
     console.log('recording');
     mainWrapper.classList.remove('recording');
     mainWrapper.classList.add('end-record');
-    console.log('stream', stream);
     recorder = RecordRTC(stream, {
         type: 'gif',
         frameRate: 1,
@@ -56,6 +75,10 @@ endBtnRecord.addEventListener('click', function(){
 
 uploadBtnRecord.addEventListener('click', function(){
     console.log("uploading gifo");
+    mainWrapper.classList.remove('upload');
+    mainWrapper.classList.add('uploading');
+    step2Btn.classList.remove("active");
+    step3Btn.classList.add("active");
     upload();
 })
 
@@ -78,7 +101,6 @@ function _handleScreenInfoError(err){
     text[0].innerHTML = "Para grabar debes darle a aceptar <br> El acceso a tu camara será válido sólo <br>por el tiempo en el que estés creando el GIFO."
     mainWrapper.classList.remove('started');
 }
-
 async function _getMedia(){
     _handleScreenInfo();
 
@@ -147,9 +169,21 @@ function upload(){
             body: form,
         }
     )
-    .then(response => response.json())
-    .then(data => {
-        console.log('response data', data);
-    }
-    .catch(console.error));
+    .then(response => {
+
+        return response.json()
+    })
+    .then(response => {
+        let list = new Array();
+        let gifo = new Gifo(response.data.id, "my Gifs", "my User");
+        console.log("gifo", gifo);
+        console.log("list", list);
+        //list = JSON.parse(localStorage.getItem('myGifsLista'))
+        list.push(gifo)
+        localStorage.setItem('myGifsLista', JSON.stringify(list))
+        console.log("response successful upload");
+        document.getElementById('img-upload').src = "./images/icons/check.svg";
+        document.getElementById('text-upload').innerText = "GIFO subido con éxito";
+    })
+    .catch(console.error);
 }
