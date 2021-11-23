@@ -13,5 +13,3 @@ if(data_favs == null || data_favs.length <= 0){
         favs_container_results.appendChild(template);
     }
 }
-
-console.log("data from lS", data_favs);
