@@ -8,6 +8,7 @@ if(data_my_gifos == null || data_my_gifos <= 0){
 } else {
     console.log("hay items pa mostrar hijo");
     for (const item of data_my_gifos) {
+        console.log(item);
         let template = create_card(item, "-md");
         my_gifos_container.appendChild(template);
     }
