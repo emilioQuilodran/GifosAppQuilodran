@@ -178,7 +178,7 @@ function upload(){
         let gifo = new Gifo(response.data.id, "my Gifs", "my User");
         console.log("gifo", gifo);
         console.log("list", list);
-        list = JSON.parse(localStorage.getItem('myGifsLista'))
+        //list = JSON.parse(localStorage.getItem('myGifsLista'))
         list.push(gifo)
         localStorage.setItem('myGifsLista', JSON.stringify(list))
         console.log("response successful upload");
