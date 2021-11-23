@@ -15,6 +15,8 @@ btn.appendChild(btn_text);
 btn.classList.add('btn');
 btn.style.display = "none";
 
+var favs_gifs = new Array;
+
 input.addEventListener('keyup', function(e){
     e.preventDefault();
     let value = input.value;

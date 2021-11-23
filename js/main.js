@@ -7,7 +7,6 @@ var modal_gallery = document.getElementById('modal-galery');
 var menu_bars = document.getElementById("menu-bars");
 var menu_times = document.getElementsByClassName("fa-times");
 var body = document.getElementById('body');
-var favs_gifs = [];
 let isModalActive = false;
 
 menu_bars.addEventListener('click', function(){
