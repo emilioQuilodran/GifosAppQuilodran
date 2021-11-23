@@ -8,6 +8,7 @@ var menu_bars = document.getElementById("menu-bars");
 var menu_times = document.getElementsByClassName("fa-times");
 var body = document.getElementById('body');
 let isModalActive = false;
+var favs_gifs = new Array;
 
 menu_bars.addEventListener('click', function(){
     modal_menu.style.display = "block";
